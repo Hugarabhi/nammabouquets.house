@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Namma Bouquets | Handmade Bouquets, Gifts & Floral Accessories in Kalaburagi</title>
-    <meta name="description" content="Namma Bouquets — handmade pipe cleaner flower bouquets, gifts and floral accessories in Kalaburagi. Discover beautiful handmade creations or customize a flower bouquet made especially for you.">
+    <title>Namma Bouquets | Premium Handmade Flowers, Gifts & Floral Accessories</title>
+    <meta name="description" content="Namma Bouquets — handmade pipe cleaner flower bouquets, thoughtful gifts, and floral accessories in Kalaburagi. Explore our creations or customize a bouquet made especially for your moment.">
     
     <!-- Open Graph for Social Sharing -->
-    <meta property="og:title" content="Namma Bouquets | Handmade Flowers & Gifts">
-    <meta property="og:description" content="Handmade flowers. Thoughtful gifts. Beautiful moments. 🌷 Discover Namma Bouquets for handmade pipe cleaner flowers, customized bouquets and floral accessories in Kalaburagi.">
+    <meta property="og:title" content="Namma Bouquets | Premium Handmade Flowers & Gifts">
+    <meta property="og:description" content="Handmade flowers. Thoughtful gifts. Beautiful moments. 🌷 Discover Namma Bouquets for customized floral creations in Kalaburagi.">
     <meta property="og:type" content="website">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -80,7 +80,7 @@
             background-color: var(--text-ink);
             border-radius: 50%;
             pointer-events: none;
-            z-index: 10000;
+            z-index: 100000;
             transform: translate(-50%, -50%);
             transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
                         height 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
@@ -123,6 +123,7 @@
             .custom-cursor { display: none !important; }
         }
 
+        /* Faster Preloader */
         #preloader {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -132,20 +133,20 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            transition: opacity 0.8s ease, visibility 0.8s ease;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
         }
 
         .preloader-petal-container {
             position: relative;
-            width: 100px; height: 100px;
+            width: 80px; height: 80px;
             margin-bottom: 2rem;
         }
 
         .preloader-petal {
             position: absolute;
             top: 50%; left: 50%;
-            width: 20px; height: 40px;
-            background-color: #F4D9D7;
+            width: 16px; height: 32px;
+            background-color: #df90ce;
             border-radius: 50% 50% 0 50%;
             transform-origin: bottom center;
             opacity: 0;
@@ -153,15 +154,15 @@
 
         @keyframes assembleFlower {
             0% { transform: translate(-50%, -150%) scale(0) rotate(var(--rot)); opacity: 0; }
-            50% { transform: translate(-50%, -100%) scale(1.2) rotate(var(--rot)); opacity: 1; }
+            50% { transform: translate(-50%, -100%) scale(1.1) rotate(var(--rot)); opacity: 1; }
             100% { transform: translate(-50%, -100%) scale(1) rotate(var(--rot)); opacity: 1; }
         }
 
-        .preloader-petal:nth-child(1) { --rot: 0deg; animation: assembleFlower 1s cubic-bezier(0.25, 1, 0.5, 1) 0.2s forwards; }
-        .preloader-petal:nth-child(2) { --rot: 72deg; animation: assembleFlower 1s cubic-bezier(0.25, 1, 0.5, 1) 0.3s forwards; }
-        .preloader-petal:nth-child(3) { --rot: 144deg; animation: assembleFlower 1s cubic-bezier(0.25, 1, 0.5, 1) 0.4s forwards; }
-        .preloader-petal:nth-child(4) { --rot: 216deg; animation: assembleFlower 1s cubic-bezier(0.25, 1, 0.5, 1) 0.5s forwards; }
-        .preloader-petal:nth-child(5) { --rot: 288deg; animation: assembleFlower 1s cubic-bezier(0.25, 1, 0.5, 1) 0.6s forwards; }
+        .preloader-petal:nth-child(1) { --rot: 0deg; animation: assembleFlower 0.8s cubic-bezier(0.25, 1, 0.5, 1) 0.1s forwards; }
+        .preloader-petal:nth-child(2) { --rot: 72deg; animation: assembleFlower 0.8s cubic-bezier(0.25, 1, 0.5, 1) 0.2s forwards; }
+        .preloader-petal:nth-child(3) { --rot: 144deg; animation: assembleFlower 0.8s cubic-bezier(0.25, 1, 0.5, 1) 0.3s forwards; }
+        .preloader-petal:nth-child(4) { --rot: 216deg; animation: assembleFlower 0.8s cubic-bezier(0.25, 1, 0.5, 1) 0.4s forwards; }
+        .preloader-petal:nth-child(5) { --rot: 288deg; animation: assembleFlower 0.8s cubic-bezier(0.25, 1, 0.5, 1) 0.5s forwards; }
 
         .preloader-text-container {
             overflow: hidden;
@@ -172,30 +173,19 @@
         }
 
         .preloader-brand {
-            font-size: 2rem;
+            font-size: 1.75rem;
             transform: translateY(100%);
             opacity: 0;
-            transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.8s ease;
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s ease;
         }
         
-        .preloader-sub {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            color: var(--leaf);
-            margin-top: 0.5rem;
-            opacity: 0;
-            transition: opacity 1s ease 0.8s;
-        }
-
         .preloader-tagline {
             font-family: 'Caveat', cursive;
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             color: var(--text-ink);
             opacity: 0;
             margin-top: 1rem;
-            transition: opacity 1s ease 1s;
+            transition: opacity 0.6s ease 0.6s;
         }
 
         .loaded #preloader {
@@ -206,8 +196,8 @@
 
         .reveal-up {
             opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
             will-change: opacity, transform;
         }
         .reveal-up.is-visible { opacity: 1; transform: translateY(0); }
@@ -219,17 +209,13 @@
         .organic-shape { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
         .organic-shape-2 { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
 
-        .editorial-title { font-size: clamp(3.5rem, 8vw, 8rem); line-height: 0.9; letter-spacing: -0.02em; }
+        .editorial-title { font-size: clamp(3rem, 8vw, 7.5rem); line-height: 0.9; letter-spacing: -0.02em; }
         .text-outline { color: transparent; -webkit-text-stroke: 1px var(--text-ink); }
 
-        /* ============================================
-           NAVBAR — ORIGINAL COLORS PRESERVED
-           mix-blend-difference + text-ivory initial state
-           kept EXACTLY as the original design.
-           ============================================ */
+        /* Navigation */
         nav { transition: background-color 0.4s ease, backdrop-filter 0.4s ease, padding 0.4s ease; }
         nav.scrolled {
-            background-color: rgba(255, 249, 244, 0.9);
+            background-color: rgba(255, 249, 244, 0.92);
             backdrop-filter: blur(12px);
             padding-top: 1rem; padding-bottom: 1rem;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
@@ -244,32 +230,43 @@
         }
         .nav-link:hover::after { transform: scaleX(1); transform-origin: left; }
 
-        /* When scrolled, nav goes to dark-ink text on ivory — original behavior */
         nav.scrolled .nav-link,
         nav.scrolled .nav-brand-row span,
         nav.scrolled .nav-icon { color: #292522; }
 
-        /* When scrolled, the customize pill inverts to keep contrast */
-        nav.scrolled .nav-customize-pill {
-            background-color: #292522;
-            color: #FFF9F4;
-        }
-        nav.scrolled .nav-customize-pill:hover {
-            background-color: #B97880;
-            color: #FFF9F4;
-        }
+        nav.scrolled .nav-customize-pill { background-color: #292522; color: #FFF9F4; }
+        nav.scrolled .nav-customize-pill:hover { background-color: #B97880; color: #FFF9F4; }
 
+        /* Mobile Menu */
+        #mobile-menu {
+            position: fixed; inset: 0; background-color: var(--bg-ivory); z-index: 98;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            opacity: 0; visibility: hidden; transform: translateY(-20px);
+            transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        #mobile-menu.is-open {
+            opacity: 1; visibility: visible; transform: translateY(0);
+        }
+        .hamburger-line { transition: transform 0.3s ease, opacity 0.3s ease; }
+        .menu-open .line-1 { transform: translateY(6px) rotate(45deg); }
+        .menu-open .line-2 { opacity: 0; }
+        .menu-open .line-3 { transform: translateY(-6px) rotate(-45deg); }
+        
+        .mobile-nav-item {
+            opacity: 0; transform: translateY(15px); transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+        #mobile-menu.is-open .mobile-nav-item { opacity: 1; transform: translateY(0); }
+
+        /* Petals */
         #petal-container {
             position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
             pointer-events: none; z-index: 50; overflow: hidden;
         }
-
         .falling-petal {
             position: absolute; background-color: #F4D9D7;
             border-radius: 50% 50% 0 50%; opacity: 0.6;
             will-change: transform; animation: drift var(--duration) linear infinite;
         }
-
         @keyframes drift {
             0% { transform: translateY(-10vh) translateX(var(--start-x)) rotate(0deg); opacity: 0; }
             10% { opacity: 0.6; }
@@ -277,6 +274,7 @@
             100% { transform: translateY(110vh) translateX(var(--end-x)) rotate(var(--end-rot)); opacity: 0; }
         }
 
+        /* Horizontal Scroll Occasions */
         .horizontal-scroll-wrapper { height: 350vh; position: relative; }
         .horizontal-scroll-container {
             position: sticky; top: 0; height: 100vh; width: 100%;
@@ -297,371 +295,116 @@
             .horizontal-scroll-container { -ms-overflow-style: none; scrollbar-width: none; }
         }
 
-        .image-zoom-container { overflow: hidden; border-radius: 1rem; }
+        .image-zoom-container { overflow: hidden; position: relative; }
         .image-zoom-container img { transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1); will-change: transform; }
         .image-zoom-container:hover img { transform: scale(1.05); }
 
-        .instagram-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-        }
+        .instagram-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
         @media (min-width: 768px) {
-            .instagram-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
-            .instagram-grid .tall {
-                grid-row: span 2;
-            }
+            .instagram-grid { grid-template-columns: repeat(4, 1fr); }
+            .instagram-grid .tall { grid-row: span 2; }
         }
 
-        /* ============================================
-           LOGO — perfect circle, original white preserved
-           ============================================ */
         .brand-logo-ring {
-            position: relative;
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(41, 37, 34, 0.55);
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+            position: relative; width: 44px; height: 44px; border-radius: 50%;
+            flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+            background-color: rgba(41, 37, 34, 0.55); box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
             transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
             overflow: hidden;
         }
+        .brand-logo-ring:hover { transform: scale(1.06); box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22); }
+        .brand-logo-img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block; }
+        nav.scrolled .brand-logo-ring { background-color: rgba(41, 37, 34, 0.85); }
+        @media (max-width: 768px) { .brand-logo-ring { width: 40px; height: 40px; } }
 
-        .brand-logo-ring:hover {
-            transform: scale(1.06);
-            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
-        }
-
-        .brand-logo-img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* On scroll the ring darkens slightly so white logo pops on ivory nav */
-        nav.scrolled .brand-logo-ring {
-            background-color: rgba(41, 37, 34, 0.85);
-        }
-
-        @media (max-width: 768px) {
-            .brand-logo-ring {
-                width: 42px;
-                height: 42px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .brand-logo-ring {
-                width: 38px;
-                height: 38px;
-            }
-        }
-
-        .nav-brand-row {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex-shrink: 0;
-        }
-
-        @media (max-width: 480px) {
-            .nav-brand-row { gap: 8px; }
-        }
-
-        /* Customize pill — initial state (over dark hero) */
         .nav-customize-pill {
-            background-color: #FFF9F4;
-            color: #292522;
+            background-color: #FFF9F4; color: #292522;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
-        .nav-customize-pill:hover {
-            background-color: #B97880;
-            color: #FFF9F4;
-        }
+        .nav-customize-pill:hover { background-color: #B97880; color: #FFF9F4; }
 
-        /* ============================================
-           WHATSAPP CUSTOMIZE MODAL
-           ============================================ */
+        /* Modal Styles */
         .nb-modal-overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(41, 37, 34, 0.55);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            z-index: 99990;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.4s ease, visibility 0.4s ease;
+            position: fixed; inset: 0; background: rgba(41, 37, 34, 0.55);
+            backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+            z-index: 99990; display: flex; align-items: center; justify-content: center;
+            padding: 1rem; opacity: 0; visibility: hidden; transition: opacity 0.4s ease, visibility 0.4s ease;
         }
-
-        .nb-modal-overlay.is-open {
-            opacity: 1;
-            visibility: visible;
-        }
-
+        .nb-modal-overlay.is-open { opacity: 1; visibility: visible; }
+        
         .nb-modal-card {
-            position: relative;
-            width: 100%;
-            max-width: 460px;
+            position: relative; width: 100%; max-width: 520px;
             background: linear-gradient(160deg, #FFF9F4 0%, #FDF1EA 55%, #F9E6E2 100%);
-            border-radius: 32px;
-            padding: 2.25rem 2rem 2rem;
-            box-shadow:
-                0 40px 80px -20px rgba(41, 37, 34, 0.35),
-                0 0 0 1px rgba(185, 120, 128, 0.12),
-                inset 0 1px 0 rgba(255, 255, 255, 0.9);
-            transform: translateY(30px) scale(0.96);
-            opacity: 0;
-            transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
-                        opacity 0.55s ease;
-            overflow: hidden;
-            max-height: 92vh;
-            overflow-y: auto;
+            border-radius: 28px; padding: 2.25rem 2.5rem;
+            box-shadow: 0 40px 80px -20px rgba(41, 37, 34, 0.35), 0 0 0 1px rgba(185, 120, 128, 0.12);
+            transform: translateY(20px) scale(0.98); opacity: 0;
+            transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s ease;
+            max-height: 90vh; overflow-y: auto;
         }
+        .nb-modal-overlay.is-open .nb-modal-card { transform: translateY(0) scale(1); opacity: 1; }
 
-        .nb-modal-overlay.is-open .nb-modal-card {
-            transform: translateY(0) scale(1);
-            opacity: 1;
-        }
+        .nb-modal-card::-webkit-scrollbar { width: 6px; }
+        .nb-modal-card::-webkit-scrollbar-thumb { background: rgba(41,37,34,0.15); border-radius: 10px; }
 
-        /* Decorative organic blobs */
-        .nb-modal-card::before,
-        .nb-modal-card::after {
-            content: '';
-            position: absolute;
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 0;
+        .nb-modal-card::before, .nb-modal-card::after {
+            content: ''; position: absolute; border-radius: 50%; pointer-events: none; z-index: 0;
         }
         .nb-modal-card::before {
-            width: 200px; height: 200px;
-            background: radial-gradient(circle, rgba(244, 217, 215, 0.75) 0%, rgba(244, 217, 215, 0) 70%);
-            top: -80px; right: -60px;
+            width: 200px; height: 200px; background: radial-gradient(circle, rgba(244, 217, 215, 0.75) 0%, rgba(244, 217, 215, 0) 70%); top: -80px; right: -60px;
         }
         .nb-modal-card::after {
-            width: 180px; height: 180px;
-            background: radial-gradient(circle, rgba(233, 216, 199, 0.6) 0%, rgba(233, 216, 199, 0) 70%);
-            bottom: -70px; left: -50px;
+            width: 180px; height: 180px; background: radial-gradient(circle, rgba(233, 216, 199, 0.6) 0%, rgba(233, 216, 199, 0) 70%); bottom: -70px; left: -50px;
         }
 
         .nb-modal-inner { position: relative; z-index: 1; }
-
         .nb-modal-close {
-            position: absolute;
-            top: 1.1rem; right: 1.1rem;
-            width: 38px; height: 38px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.65);
-            color: #292522;
-            border: 1px solid rgba(41, 37, 34, 0.08);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            z-index: 5;
+            position: absolute; top: 1.25rem; right: 1.25rem; width: 36px; height: 36px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            background: rgba(255, 255, 255, 0.65); color: #292522;
+            border: 1px solid rgba(41, 37, 34, 0.08); cursor: pointer; transition: all 0.3s ease; z-index: 5;
         }
-        .nb-modal-close:hover {
-            background: #B97880;
-            color: #FFF9F4;
-            transform: rotate(90deg);
-        }
+        .nb-modal-close:hover { background: #B97880; color: #FFF9F4; transform: rotate(90deg); }
 
-        .nb-modal-eyebrow {
-            font-family: 'Caveat', cursive;
-            font-size: 1.6rem;
-            color: #B97880;
-            line-height: 1;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
+        .nb-field { margin-bottom: 1.1rem; text-align: left; }
+        .nb-field-group { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        @media (max-width: 480px) { .nb-field-group { grid-template-columns: 1fr; gap: 0; } }
 
-        .nb-modal-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
-            line-height: 1.1;
-            color: #292522;
-            margin-bottom: 0.4rem;
-        }
-        .nb-modal-title em {
-            font-style: italic;
-            color: #74866D;
-        }
-
-        .nb-modal-sub {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.85rem;
-            color: rgba(41, 37, 34, 0.6);
-            margin-bottom: 1.5rem;
-            line-height: 1.5;
-        }
-
-        .nb-field {
-            margin-bottom: 1.1rem;
-            text-align: left;
-        }
-
-        .nb-label {
-            display: block;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.68rem;
-            font-weight: 500;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: #74866D;
-            margin-bottom: 0.5rem;
-        }
-
+        .nb-label { display: block; font-family: 'DM Sans', sans-serif; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: #74866D; margin-bottom: 0.4rem; }
         .nb-input {
-            width: 100%;
-            padding: 0.9rem 1.1rem;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.95rem;
-            color: #292522;
-            background: rgba(255, 255, 255, 0.75);
-            border: 1.5px solid rgba(185, 120, 128, 0.22);
-            border-radius: 16px;
-            outline: none;
-            transition: all 0.3s ease;
+            width: 100%; padding: 0.85rem 1.1rem; font-family: 'DM Sans', sans-serif; font-size: 0.95rem;
+            color: #292522; background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(185, 120, 128, 0.2);
+            border-radius: 12px; outline: none; transition: all 0.3s ease;
         }
-        .nb-input::placeholder {
-            color: rgba(41, 37, 34, 0.35);
-        }
-        .nb-input:focus {
-            border-color: #B97880;
-            background: #FFFFFF;
-            box-shadow: 0 0 0 4px rgba(185, 120, 128, 0.12);
-        }
-        .nb-input.is-error {
-            border-color: #C0392B;
-            background: #FFF5F5;
-        }
-
-        .nb-error-msg {
-            display: none;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.72rem;
-            color: #C0392B;
-            margin-top: 0.4rem;
-            padding-left: 0.3rem;
-        }
-        .nb-error-msg.show { display: block; }
-
+        textarea.nb-input { resize: none; min-height: 80px; }
+        .nb-input:focus { border-color: #B97880; background: #FFFFFF; box-shadow: 0 0 0 3px rgba(185, 120, 128, 0.1); }
+        
         .nb-submit-btn {
-            width: 100%;
-            margin-top: 0.6rem;
-            padding: 1.05rem 1.5rem;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.8rem;
-            font-weight: 500;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: #FFF9F4;
-            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-            border: none;
-            border-radius: 999px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.7rem;
-            box-shadow: 0 12px 28px -8px rgba(18, 140, 126, 0.55);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            overflow: hidden;
+            width: 100%; margin-top: 1rem; padding: 1.1rem 1.5rem; font-family: 'DM Sans', sans-serif;
+            font-size: 0.8rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase;
+            color: #FFF9F4; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            border: none; border-radius: 999px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.7rem;
+            box-shadow: 0 10px 20px -8px rgba(18, 140, 126, 0.5); transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .nb-submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 18px 34px -8px rgba(18, 140, 126, 0.65);
-        }
-        .nb-submit-btn:active { transform: translateY(0); }
+        .nb-submit-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 24px -8px rgba(18, 140, 126, 0.6); }
 
-        .nb-submit-btn svg {
-            width: 18px; height: 18px;
-            flex-shrink: 0;
-        }
-
-        .nb-modal-footnote {
-            text-align: center;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.68rem;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: rgba(41, 37, 34, 0.4);
-            margin-top: 1rem;
-        }
-
-        /* Success state */
-        .nb-success {
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 1rem 0 0.5rem;
-        }
+        .nb-success { display: none; flex-direction: column; align-items: center; text-align: center; padding: 2rem 0 1rem; }
         .nb-success.show { display: flex; }
-
         .nb-success-icon {
-            width: 72px; height: 72px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.25rem;
-            box-shadow: 0 14px 30px -8px rgba(18, 140, 126, 0.5);
-            animation: nbPop 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+            width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;
+            box-shadow: 0 10px 20px -5px rgba(18, 140, 126, 0.4); animation: nbPop 0.5s cubic-bezier(0.22, 1, 0.36, 1);
         }
-
-        @keyframes nbPop {
-            0% { transform: scale(0); }
-            60% { transform: scale(1.15); }
-            100% { transform: scale(1); }
-        }
-
-        .nb-success-icon svg { width: 34px; height: 34px; color: #FFF9F4; }
-
-        .nb-success h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.9rem;
-            color: #292522;
-            margin-bottom: 0.5rem;
-        }
-
-        .nb-success p {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.88rem;
-            color: rgba(41, 37, 34, 0.65);
-            line-height: 1.55;
-            max-width: 280px;
-        }
-
-        /* Mobile responsiveness */
-        @media (max-width: 480px) {
-            .nb-modal-card {
-                padding: 1.75rem 1.35rem 1.5rem;
-                border-radius: 26px;
-            }
-            .nb-modal-title { font-size: 1.7rem; }
-            .nb-modal-sub { font-size: 0.82rem; margin-bottom: 1.25rem; }
-            .nb-input { padding: 0.85rem 1rem; font-size: 0.9rem; }
-            .nb-submit-btn { padding: 0.95rem 1.25rem; font-size: 0.72rem; }
-            .nb-modal-close { top: 0.85rem; right: 0.85rem; width: 34px; height: 34px; }
-        }
-
+        @keyframes nbPop { 0% { transform: scale(0); } 60% { transform: scale(1.1); } 100% { transform: scale(1); } }
+        
         body.nb-modal-locked { overflow: hidden; }
+
+        /* Trust Strip */
+        .trust-strip { border-top: 1px solid rgba(41,37,34,0.06); border-bottom: 1px solid rgba(41,37,34,0.06); }
+        .trust-item { position: relative; }
+        .trust-item:not(:last-child)::after {
+            content: '•'; position: absolute; right: -1.25rem; top: 50%; transform: translateY(-50%); color: rgba(116, 134, 109, 0.4);
+        }
+        @media (max-width: 768px) { .trust-item:not(:last-child)::after { display: none; } }
     </style>
 </head>
 <body class="antialiased font-sans selection:bg-rose selection:text-ivory">
@@ -679,54 +422,77 @@
             <div class="preloader-petal"></div>
         </div>
         <div class="preloader-text-container">
-            <div class="preloader-brand font-serif tracking-widest text-ink">NAMMA BOUQUETS</div>
-            <div class="preloader-sub">Flowers • Gifts • Little Moments</div>
+            <div class="preloader-brand font-serif tracking-widest text-ink">nammabouquets.house</div>
         </div>
-        <div class="preloader-tagline">Handmade with love. Made to make someone smile.</div>
+        <div class="preloader-tagline">Made for your moment.</div>
     </div>
 
-    <!-- NAVBAR: original colors preserved (mix-blend-difference + text-ivory) -->
+    <!-- NAVBAR -->
     <nav id="navbar" class="fixed w-full top-0 z-[100] px-6 md:px-12 py-6 flex justify-between items-center mix-blend-difference text-ivory transition-all duration-500">
-        <a href="#" class="nav-brand-row hover-text-trigger" style="mix-blend-mode: normal;">
+        <a href="#" class="flex items-center gap-3 hover-text-trigger" style="mix-blend-mode: normal;">
             <div class="brand-logo-ring">
-                <img src="logo.jpg" alt="Namma Bouquets logo" class="brand-logo-img">
+                <img src="logo.jpg" alt="Namma Bouquets logo" class="brand-logo-img" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0ZGRjlGNCIvPjwvc3ZnPg=='">
             </div>
-            <span class="font-serif text-xl md:text-2xl tracking-widest uppercase text-ivory">NAMMA BOUQUETS</span>
+            <span class="font-serif text-xl tracking-widest uppercase text-ivory">nammabouquets.house</span>
         </a>
         
-        <div class="hidden md:flex space-x-8 font-sans text-sm tracking-widest uppercase">
+        <div class="hidden md:flex space-x-8 font-sans text-xs tracking-[0.15em] uppercase">
             <a href="#" class="nav-link hover-text-trigger">Home</a>
-            <a href="#creations" class="nav-link hover-text-trigger">Bouquets</a>
-            <a href="#creations" class="nav-link hover-text-trigger">Gifts</a>
-            <a href="#custom" class="nav-link hover-text-trigger">Customize</a>
+            <a href="#shop" class="nav-link hover-text-trigger">Bouquets</a>
+            <a href="#shop" class="nav-link hover-text-trigger">Gifts</a>
             <a href="#story" class="nav-link hover-text-trigger">Our Story</a>
         </div>
 
         <div class="flex space-x-6 items-center">
             <a href="https://instagram.com/nammabouquets.house" target="_blank" class="hover-text-trigger group hidden md:block nav-icon" aria-label="Instagram">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="group-hover:scale-110 transition-transform" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="group-hover:scale-110 transition-transform" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
             </a>
-            <a href="#custom" class="hover-text-trigger nav-customize-pill font-sans text-xs uppercase tracking-[0.2em] px-5 py-2.5 rounded-full" style="mix-blend-mode: normal;">
-                Customize
-            </a>
+            <button class="btn-customize hover-text-trigger nav-customize-pill font-sans text-xs uppercase tracking-[0.15em] px-5 py-2 rounded-full hidden md:block" style="mix-blend-mode: normal;">
+                Create Your Bouquet
+            </button>
+            
+            <!-- Mobile Menu Toggle -->
+            <button id="mobileMenuBtn" class="md:hidden flex flex-col justify-center items-center w-8 h-8 z-[101] relative hover-text-trigger" aria-label="Toggle Menu">
+                <span class="hamburger-line line-1 w-6 h-[1.5px] bg-current mb-1.5 block"></span>
+                <span class="hamburger-line line-2 w-6 h-[1.5px] bg-current mb-1.5 block"></span>
+                <span class="hamburger-line line-3 w-6 h-[1.5px] bg-current block"></span>
+            </button>
         </div>
     </nav>
 
+    <!-- MOBILE MENU OVERLAY -->
+    <div id="mobile-menu">
+        <div class="flex flex-col items-center justify-center h-full w-full gap-8 text-center px-6">
+            <a href="#" class="mobile-nav-item font-serif text-4xl text-ink hover:text-rose transition-colors mobile-link">Home</a>
+            <a href="#shop" class="mobile-nav-item font-serif text-4xl text-ink hover:text-rose transition-colors mobile-link" style="transition-delay: 50ms">Bouquets & Gifts</a>
+            <a href="#occasions" class="mobile-nav-item font-serif text-4xl text-ink hover:text-rose transition-colors mobile-link" style="transition-delay: 100ms">Occasions</a>
+            <a href="#story" class="mobile-nav-item font-serif text-4xl text-ink hover:text-rose transition-colors mobile-link" style="transition-delay: 150ms">Our Story</a>
+            
+            <button class="mobile-nav-item btn-customize font-sans text-xs uppercase tracking-[0.15em] bg-ink text-ivory px-8 py-3.5 rounded-full mt-4 w-full max-w-xs hover:bg-rose transition-colors" style="transition-delay: 200ms">
+                Create Your Bouquet
+            </button>
+            
+            <a href="https://instagram.com/nammabouquets.house" target="_blank" class="mobile-nav-item font-sans text-xs uppercase tracking-[0.15em] text-ink/60 mt-6 flex items-center gap-2 mobile-link" style="transition-delay: 250ms">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                Instagram
+            </a>
+        </div>
+    </div>
+
     <main>
-        <section id="hero" class="relative min-h-screen w-full flex items-center pt-20 overflow-hidden">
+        <section id="hero" class="relative min-h-[90vh] w-full flex items-center pt-24 overflow-hidden">
             <div class="absolute inset-0 z-0">
-                <div class="absolute inset-0 bg-gradient-to-b from-ivory via-blush/20 to-ivory"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-ivory via-blush/15 to-ivory"></div>
             </div>
             
-            <div class="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10">
-                
-                <div class="md:col-span-6 flex flex-col items-start z-20">
-                    <span class="font-sans text-xs uppercase tracking-[0.3em] text-leaf mb-6 reveal-up">HANDMADE • MADE FOR YOUR MOMENT</span>
+            <div class="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-12 items-center relative z-10">
+                <div class="md:col-span-6 flex flex-col items-start z-20 mt-10 md:mt-0">
+                    <span class="font-sans text-[10px] md:text-xs uppercase tracking-[0.25em] text-leaf mb-6 reveal-up">PREMIUM HANDMADE CREATIONS</span>
                     
                     <h1 class="font-serif editorial-title mb-6 flex flex-col">
                         <span class="overflow-hidden"><span class="block translate-y-full inline-block anim-title-word delay-100">Flowers</span></span>
                         <span class="overflow-hidden"><span class="block translate-y-full inline-block anim-title-word delay-200">Made With</span></span>
-                        <span class="overflow-hidden flex items-end gap-4">
+                        <span class="overflow-hidden flex items-end gap-2 md:gap-4">
                             <span class="block translate-y-full inline-block anim-title-word delay-300 text-rose italic font-light relative whitespace-nowrap">
                                 A Little More Love.
                                 <svg class="absolute -bottom-2 left-0 w-full text-rose/30" viewBox="0 0 100 20" preserveAspectRatio="none">
@@ -736,37 +502,30 @@
                         </span>
                     </h1>
                     
-                    <p class="font-sans text-ink/70 max-w-sm mb-10 text-lg reveal-up delay-400">
-                        Handmade pipe cleaner flowers, beautiful gifts and customized creations made to turn ordinary moments into something worth remembering.
+                    <p class="font-sans text-ink/75 max-w-md mb-10 text-base md:text-lg reveal-up delay-400 leading-relaxed">
+                        Handmade pipe cleaner flowers, thoughtful gifts, and customized creations designed to turn ordinary moments into something worth remembering.
                     </p>
                     
-                    <div class="flex flex-wrap items-center gap-6 reveal-up delay-400">
-                        <a href="#creations" class="group flex items-center gap-4 font-sans uppercase tracking-widest text-sm hover-explore-trigger">
-                            <span class="border-b border-ink pb-1 group-hover:pr-4 transition-all duration-300">Explore Bouquets</span>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="transform -rotate-45 group-hover:rotate-0 transition-transform duration-300"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    <div class="flex flex-col sm:flex-row items-center gap-6 reveal-up delay-400 w-full sm:w-auto">
+                        <button class="btn-customize font-sans text-xs uppercase tracking-[0.15em] bg-ink text-ivory px-8 py-4 rounded-full hover:bg-rose transition-colors w-full sm:w-auto hover-text-trigger shadow-lg shadow-ink/10">
+                            Create Your Bouquet
+                        </button>
+                        <a href="#shop" class="group flex items-center gap-3 font-sans uppercase tracking-[0.15em] text-xs hover-explore-trigger">
+                            <span class="border-b border-ink/40 pb-0.5 group-hover:border-ink transition-colors">Explore Bouquets</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="transform group-hover:translate-x-1 transition-transform"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                         </a>
-                        <a href="#custom" class="font-sans text-sm tracking-widest uppercase text-rose hover:text-ink transition-colors hover-text-trigger">
-                            Customize Yours &rarr;
-                        </a>
-                    </div>
-                    
-                    <div class="mt-12 flex flex-col gap-2 font-sans text-xs uppercase tracking-widest text-ink/40 reveal-up delay-400">
-                        <span>Bouquets • Gifts • Floral Accessories</span>
-                        <span class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Made in Kalaburagi</span>
                     </div>
                 </div>
 
-                <div class="md:col-span-6 relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center mt-12 md:mt-0">
-                    <div class="relative w-[85%] h-[85%] z-10 hero-parallax" data-speed="0.05">
+                <div class="md:col-span-6 relative h-[50vh] md:h-[75vh] w-full flex items-center justify-center mt-4 md:mt-0">
+                    <div class="relative w-[90%] md:w-[85%] h-[90%] z-10 hero-parallax" data-speed="0.04">
                         <div class="absolute inset-0 bg-blush/30 organic-shape blur-2xl transform -translate-x-4 translate-y-4"></div>
-                        <img src="flower.jpeg" 
-                             alt="Namma Bouquets Handmade Creation" 
-                             class="w-full h-full object-cover organic-shape shadow-2xl hover-view-trigger transition-transform duration-700 hover:scale-[1.02]">
+                        <img src="flower.jpeg" alt="Namma Bouquets Handmade Creation" class="w-full h-full object-cover organic-shape shadow-xl hover-view-trigger transition-transform duration-700 hover:scale-[1.02]" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2QxZDFkMSIvPjwvc3ZnPg=='">
                         
-                        <div class="absolute -right-6 md:-right-12 top-1/4 w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-ivory shadow-lg hero-parallax flex items-center justify-center relative group" data-speed="-0.08">
-                            <img src="pink.jpeg" alt="Handmade detail" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute -right-4 md:-right-10 top-1/4 w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden border-4 border-ivory shadow-lg hero-parallax flex items-center justify-center relative group" data-speed="-0.06">
+                            <img src="pink.jpeg" alt="Handmade detail" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2U1ZTVlNSIvPjwvc3ZnPg=='">
                             <div class="absolute inset-0 bg-ink/30 flex items-center justify-center text-center p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm">
-                                <span class="font-hand text-ivory text-xl">Every Detail<br>Matters</span>
+                                <span class="font-hand text-ivory text-lg md:text-xl leading-tight">Every Detail<br>Matters</span>
                             </div>
                         </div>
                     </div>
@@ -774,93 +533,37 @@
             </div>
         </section>
 
-        <section id="story" class="py-32 bg-ivory">
-            <div class="container mx-auto px-6 md:px-12">
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
-                    <div class="md:col-span-5 order-2 md:order-1">
-                        <div class="image-zoom-container organic-shape-2 h-[70vh] shadow-xl reveal-up">
-                            <img src="purple.jpeg" alt="Crafting handmade flowers" class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                    
-                    <div class="md:col-span-7 order-1 md:order-2">
-                        <span class="font-sans text-xs uppercase tracking-[0.2em] text-leaf mb-6 block reveal-up">THE STORY BEHIND THE FLOWERS</span>
-                        <h2 class="font-serif text-5xl md:text-7xl leading-tight mb-8 reveal-up delay-100">
-                            Made by Hand.<br>
-                            <span class="italic text-leaf">Made to Be Remembered.</span>
-                        </h2>
-                        
-                        <div class="font-sans text-lg text-ink/80 max-w-md space-y-6 reveal-up delay-200">
-                            <p>At Namma Bouquets, we believe a gift becomes more special when it feels personal.</p>
-                            <p>Every handmade pipe cleaner flower is carefully shaped, arranged and finished with attention to the little details that make a bouquet feel truly yours.</p>
-                            <p>Whether you're celebrating someone, surprising a friend or simply saying "I was thinking of you", we create flowers and gifts that carry a little more meaning.</p>
-                            <p>From beautiful bouquets to thoughtful gifts and floral accessories, every creation is designed to bring a little colour, creativity and happiness into someone's day.</p>
-                        </div>
-                        
-                        <div class="mt-12 reveal-up delay-300">
-                            <p class="font-hand text-3xl text-rose mb-1">Namma Bouquets</p>
-                            <p class="font-sans text-xs uppercase tracking-widest text-ink/50">Handmade in Kalaburagi</p>
-                        </div>
-                    </div>
-                </div>
+        <!-- Trust Strip -->
+        <div class="bg-ivory trust-strip py-5 relative z-20">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row justify-center items-center gap-4 md:gap-10 text-[10px] md:text-xs uppercase tracking-[0.2em] text-leaf/80 font-medium">
+                <span class="trust-item reveal-up delay-100">Handmade with Care</span>
+                <span class="trust-item reveal-up delay-200 hidden md:block">Personalized for Your Moment</span>
+                <span class="trust-item reveal-up delay-300">Created to be Remembered</span>
+                <span class="trust-item reveal-up delay-400 hidden md:block">Made in Kalaburagi</span>
             </div>
-        </section>
+        </div>
 
-        <section id="creations" class="py-24 bg-beige/20">
+        <section id="creations" class="pt-24 pb-16 bg-beige/10">
             <div class="container mx-auto px-6 md:px-12">
-                
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 reveal-up">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 reveal-up">
                     <div class="max-w-xl">
-                        <span class="font-sans text-xs uppercase tracking-[0.2em] text-rose mb-4 block">01 — OUR CREATIONS</span>
+                        <span class="font-sans text-[10px] uppercase tracking-[0.2em] text-rose mb-4 block">01 — THE COLLECTION</span>
                         <h2 class="font-serif text-4xl md:text-6xl mb-4">Made to Make<br>Someone Smile.</h2>
-                        <p class="font-sans text-ink/70">Explore handmade bouquets, thoughtful gifts and floral accessories created for every kind of beautiful moment.</p>
+                        <p class="font-sans text-ink/70 text-sm md:text-base leading-relaxed">Explore handmade bouquets, thoughtful gifts and floral accessories created for every kind of beautiful moment.</p>
                     </div>
-                    <a href="https://instagram.com/nammabouquets.house" target="_blank" class="hidden md:inline-block border-b border-ink pb-1 font-sans text-sm uppercase tracking-widest hover-text-trigger mt-6 md:mt-0">View Gallery</a>
+                    <a href="#shop" class="hidden md:inline-flex items-center gap-2 font-sans text-xs uppercase tracking-[0.15em] hover-text-trigger border-b border-ink/40 hover:border-ink pb-0.5 transition-colors">
+                        Explore Shop <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
                 </div>
+            </div>
+        </section>
 
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12">
-                    
-                    <div class="md:col-span-7 group reveal-up">
-                        <div class="relative image-zoom-container rounded-2xl h-[60vh] md:h-[80vh] bg-blush/20">
-                            <img src="red.jpeg" alt="Handmade Bouquets" class="w-full h-full object-cover p-8 mix-blend-multiply hover-view-trigger">
-                            
-                            <div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-ink/80 to-transparent text-ivory opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-                                <h3 class="font-serif text-3xl mb-2">Handmade Bouquets</h3>
-                                <p class="font-sans text-sm opacity-90 mb-6 max-w-sm">Beautiful pipe cleaner flowers arranged into bouquets that stay special long after the moment is over.</p>
-                                <a href="#custom" class="inline-block font-sans text-xs uppercase tracking-[0.2em] bg-ivory text-ink px-6 py-3 rounded-full hover:bg-rose hover:text-ivory transition-colors">Explore Bouquets &rarr;</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="md:col-span-5 flex flex-col gap-6 md:gap-12">
-                        
-                        <div class="group flex-1 reveal-up delay-100">
-                            <div class="relative image-zoom-container rounded-2xl h-[40vh] bg-leaf/10 overflow-hidden">
-                                <img src="birds.png" alt="Thoughtful Gifts" class="w-full h-full object-cover p-6 mix-blend-multiply hover-view-trigger">
-                                <div class="absolute inset-0 bg-ink/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                    <a href="#custom" class="font-sans text-xs uppercase tracking-[0.2em] bg-ivory text-ink px-6 py-3 rounded-full hover:bg-leaf hover:text-ivory transition-colors">Explore Gifts &rarr;</a>
-                                </div>
-                            </div>
-                            <div class="mt-4">
-                                <h3 class="font-serif text-2xl">Thoughtful Gifts</h3>
-                                <p class="font-sans text-sm text-ink/70 mt-2">Little gifts made to say "I thought of you" without needing a special reason.</p>
-                            </div>
-                        </div>
-
-                        <div class="group flex-1 reveal-up delay-200">
-                            <div class="relative image-zoom-container rounded-2xl h-[40vh] bg-beige/40 overflow-hidden">
-                                <img src="accessries.png" alt="Floral Accessories" class="w-full h-full object-cover p-6 mix-blend-multiply hover-view-trigger">
-                                <div class="absolute inset-0 bg-ink/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                    <a href="#custom" class="font-sans text-xs uppercase tracking-[0.2em] bg-ivory text-ink px-6 py-3 rounded-full hover:bg-beige hover:text-ink transition-colors">Explore Accessories &rarr;</a>
-                                </div>
-                            </div>
-                            <div class="mt-4">
-                                <h3 class="font-serif text-2xl">Floral Accessories</h3>
-                                <p class="font-sans text-sm text-ink/70 mt-2">Handmade floral details designed to add a little more charm to your space, outfit or special occasion.</p>
-                            </div>
-                        </div>
-
-                    </div>
+        <!-- PRODUCT LAYER (New Addition) -->
+        <section id="shop" class="pb-24 bg-beige/10">
+            <div class="container mx-auto px-6 md:px-12">
+                <!-- Products dynamically injected here via JS to maintain cleanly structured data -->
+                <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+                    <!-- Javascript handles rendering -->
                 </div>
             </div>
         </section>
@@ -869,71 +572,88 @@
             <div class="horizontal-scroll-wrapper" id="horizontal-wrapper">
                 <div class="horizontal-scroll-container">
                     
-                    <div class="absolute left-6 md:left-12 top-12 md:top-1/2 md:-translate-y-1/2 z-10 pointer-events-none w-1/3">
-                        <span class="font-sans text-xs uppercase tracking-[0.2em] text-ivory/60 mb-4 block">02 — FIND YOUR KIND OF BEAUTIFUL</span>
+                    <div class="absolute left-6 md:left-12 top-12 md:top-1/2 md:-translate-y-1/2 z-10 pointer-events-none w-full md:w-1/3">
+                        <span class="font-sans text-[10px] uppercase tracking-[0.2em] text-ivory/60 mb-3 block">02 — FIND YOUR KIND OF BEAUTIFUL</span>
                         <h2 class="font-serif text-4xl md:text-6xl leading-tight mb-4">Something Special<br><span class="italic text-blush">For Every Moment.</span></h2>
                         <p class="font-sans text-sm mt-2 text-ivory/80 max-w-xs hidden md:block">Because sometimes the best gifts are the ones that feel like they were made just for them.</p>
                     </div>
 
-                    <div class="horizontal-track items-center md:pl-[45vw]" id="horizontal-track">
+                    <div class="horizontal-track items-center md:pl-[40vw]" id="horizontal-track">
                         
-                        <div class="horizontal-item group">
-                            <div class="image-zoom-container rounded-t-full h-[50vh] mb-6 overflow-hidden relative">
-                                <img src="red.jpeg" alt="For Birthdays" class="w-full h-full object-cover hover-view-trigger">
-                                <div class="absolute inset-0 bg-ink/20 group-hover:bg-transparent transition-colors duration-500"></div>
+                        <div class="horizontal-item group flex flex-col items-center">
+                            <div class="image-zoom-container rounded-t-full h-[45vh] md:h-[55vh] w-full mb-6 overflow-hidden relative">
+                                <img src="red.jpeg" alt="For Birthdays" class="w-full h-full object-cover hover-view-trigger" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2QxZDFkMSIvPjwvc3ZnPg=='">
                             </div>
-                            <div class="text-center">
+                            <div class="text-center w-full">
                                 <h3 class="font-serif text-3xl">For Birthdays</h3>
-                                <p class="font-sans text-sm text-ivory/70 mt-2">Make their day a little more colourful.</p>
-                                <a href="#custom" class="font-sans text-xs uppercase tracking-widest mt-4 block opacity-70 hover:opacity-100 transition-opacity">Explore &rarr;</a>
+                                <p class="font-sans text-sm text-ivory/70 mt-2 mb-4">Make their day a little more colourful.</p>
+                                <button onclick="openModalWithOccasion('Birthday')" class="font-sans text-[10px] uppercase tracking-[0.15em] border border-ivory/30 px-6 py-2.5 rounded-full hover:bg-ivory hover:text-leaf transition-colors hover-text-trigger">
+                                    Create a Birthday Bouquet &rarr;
+                                </button>
                             </div>
                         </div>
 
-                        <div class="horizontal-item group">
-                            <div class="image-zoom-container rounded-t-full h-[50vh] mb-6 overflow-hidden relative mt-12">
-                                <img src="pink.jpeg" alt="For Someone Special" class="w-full h-full object-cover hover-view-trigger">
-                                <div class="absolute inset-0 bg-ink/20 group-hover:bg-transparent transition-colors duration-500"></div>
+                        <div class="horizontal-item group flex flex-col items-center md:mt-24">
+                            <div class="image-zoom-container rounded-t-full h-[45vh] md:h-[55vh] w-full mb-6 overflow-hidden relative">
+                                <img src="pink.jpeg" alt="For Someone Special" class="w-full h-full object-cover hover-view-trigger" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2QxZDFkMSIvPjwvc3ZnPg=='">
                             </div>
-                            <div class="text-center">
-                                <h3 class="font-serif text-3xl">For Someone Special</h3>
-                                <p class="font-sans text-sm text-ivory/70 mt-2">A handmade way to say what words sometimes can't.</p>
-                                <a href="#custom" class="font-sans text-xs uppercase tracking-widest mt-4 block opacity-70 hover:opacity-100 transition-opacity">Explore &rarr;</a>
+                            <div class="text-center w-full">
+                                <h3 class="font-serif text-3xl">Someone Special</h3>
+                                <p class="font-sans text-sm text-ivory/70 mt-2 mb-4">Say what words sometimes can't.</p>
+                                <button onclick="openModalWithOccasion('Anniversary/Love')" class="font-sans text-[10px] uppercase tracking-[0.15em] border border-ivory/30 px-6 py-2.5 rounded-full hover:bg-ivory hover:text-leaf transition-colors hover-text-trigger">
+                                    Create Something Special &rarr;
+                                </button>
                             </div>
                         </div>
 
-                        <div class="horizontal-item group">
-                            <div class="image-zoom-container rounded-t-full h-[50vh] mb-6 overflow-hidden relative">
-                                <img src="purple.jpeg" alt="For Friends" class="w-full h-full object-cover hover-view-trigger">
-                                <div class="absolute inset-0 bg-ink/20 group-hover:bg-transparent transition-colors duration-500"></div>
+                        <div class="horizontal-item group flex flex-col items-center">
+                            <div class="image-zoom-container rounded-t-full h-[45vh] md:h-[55vh] w-full mb-6 overflow-hidden relative">
+                                <img src="purple.jpeg" alt="For Friends " class="w-full h-full object-cover hover-view-trigger" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2QxZDFkMSIvPjwvc3ZnPg=='">
                             </div>
-                            <div class="text-center">
+                            <div class="text-center w-full">
                                 <h3 class="font-serif text-3xl">For Friends</h3>
-                                <p class="font-sans text-sm text-ivory/70 mt-2">Because the best friendships deserve a little something beautiful.</p>
-                                <a href="#custom" class="font-sans text-xs uppercase tracking-widest mt-4 block opacity-70 hover:opacity-100 transition-opacity">Explore &rarr;</a>
+                                <p class="font-sans text-sm text-ivory/70 mt-2 mb-4">Because friendships deserve flowers too.</p>
+                                <button onclick="openModalWithOccasion('Friendship')" class="font-sans text-[10px] uppercase tracking-[0.15em] border border-ivory/30 px-6 py-2.5 rounded-full hover:bg-ivory hover:text-leaf transition-colors hover-text-trigger">
+                                    Create a Friendship Gift &rarr;
+                                </button>
+                            </div>
+                        </div>
+                        <div class="horizontal-item group flex flex-col items-center md:mt-24">
+                            <div class="image-zoom-container rounded-t-full h-[45vh] md:h-[55vh] w-full mb-6 overflow-hidden relative">
+                                <img src="LILIES_999.jpg" alt="For Wedding Gifts" class="w-full h-full object-cover hover-view-trigger" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2QxZDFkMSIvPjwvc3ZnPg=='">
+                            </div>
+                            <div class="text-center w-full">
+                                <h3 class="font-serif text-3xl">For Wedding Gifts</h3>
+                                <p class="font-sans text-sm text-ivory/70 mt-2 mb-4">For love, laughter, and forever—because weddings deserve flowers too. 🤍</p>
+                                <button onclick="openModalWithOccasion('Wedding')" class="font-sans text-[10px] uppercase tracking-[0.15em] border border-ivory/30 px-6 py-2.5 rounded-full hover:bg-ivory hover:text-leaf transition-colors hover-text-trigger">
+                                    Create a Wedding Gift &rarr;
+                                </button>
                             </div>
                         </div>
 
-                        <div class="horizontal-item group">
-                            <div class="image-zoom-container rounded-t-full h-[50vh] mb-6 overflow-hidden relative mt-12">
-                                <img src="red.jpeg" alt="Just Because" class="w-full h-full object-cover hover-view-trigger">
-                                <div class="absolute inset-0 bg-ink/20 group-hover:bg-transparent transition-colors duration-500"></div>
+                        <div class="horizontal-item group flex flex-col items-center">
+                            <div class="image-zoom-container rounded-t-full h-[45vh] md:h-[55vh] w-full mb-6 overflow-hidden relative">
+                                <img src="SWAN_400.jpg" alt="For Love" class="w-full h-full object-cover hover-view-trigger" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2QxZDFkMSIvPjwvc3ZnPg=='">
                             </div>
-                            <div class="text-center">
-                                <h3 class="font-serif text-3xl">Just Because</h3>
-                                <p class="font-sans text-sm text-ivory/70 mt-2">No occasion needed. Just a reason to make someone smile.</p>
-                                <a href="#custom" class="font-sans text-xs uppercase tracking-widest mt-4 block opacity-70 hover:opacity-100 transition-opacity">Explore &rarr;</a>
+                            <div class="text-center w-full">
+                                <h3 class="font-serif text-3xl">For Love</h3>
+                                <p class="font-sans text-sm text-ivory/70 mt-2 mb-4">Because love deserves flowers too.</p>
+                                <button onclick="openModalWithOccasion('Love')" class="font-sans text-[10px] uppercase tracking-[0.15em] border border-ivory/30 px-6 py-2.5 rounded-full hover:bg-ivory hover:text-leaf transition-colors hover-text-trigger">
+                                    Create a Love Gift &rarr;
+                                </button>
                             </div>
                         </div>
 
-                        <div class="horizontal-item group">
-                            <div class="image-zoom-container rounded-t-full h-[50vh] mb-6 overflow-hidden relative pr-12">
-                                <img src="purple.jpeg" alt="Customize Yours" class="w-full h-full object-cover hover-view-trigger">
-                                <div class="absolute inset-0 bg-ink/20 group-hover:bg-transparent transition-colors duration-500"></div>
+                        <div class="horizontal-item group flex flex-col items-center md:mt-24 md:pr-12">
+                            <div class="image-zoom-container rounded-t-full h-[45vh] md:h-[55vh] w-full mb-6 overflow-hidden relative bg-rose/20">
+                                <img src="flower.jpeg" alt="Just Because" class="w-full h-full object-cover hover-view-trigger opacity-90" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2QxZDFkMSIvPjwvc3ZnPg=='">
                             </div>
-                            <div class="text-center pr-12">
-                                <h3 class="font-serif text-3xl text-rose">Customize Yours</h3>
-                                <p class="font-sans text-sm text-ivory/70 mt-2">Your colours. Your idea. Your bouquet.</p>
-                                <a href="#custom" class="font-sans text-xs uppercase tracking-widest mt-4 block text-rose opacity-80 hover:opacity-100 transition-opacity">Create &rarr;</a>
+                            <div class="text-center w-full md:pr-12">
+                                <h3 class="font-serif text-3xl text-blush">Customize Yours</h3>
+                                <p class="font-sans text-sm text-ivory/70 mt-2 mb-4">Make something completely theirs.</p>
+                                <button class="btn-customize font-sans text-[10px] uppercase tracking-[0.15em] bg-blush text-ink px-6 py-2.5 rounded-full hover:bg-ivory transition-colors hover-text-trigger">
+                                    Create Your Bouquet &rarr;
+                                </button>
                             </div>
                         </div>
 
@@ -942,77 +662,74 @@
             </div>
         </section>
 
-        <section id="custom" class="py-32 bg-ivory relative overflow-hidden">
-            <div class="absolute -top-32 -left-32 w-96 h-96 bg-blush rounded-full mix-blend-multiply filter blur-3xl opacity-50 hero-parallax" data-speed="0.1"></div>
-            <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-beige rounded-full mix-blend-multiply filter blur-3xl opacity-50 hero-parallax" data-speed="-0.1"></div>
-
-            <div class="container mx-auto px-6 max-w-4xl text-center relative z-10">
-                <span class="font-hand text-4xl text-rose mb-6 block reveal-up">Have Something Special in Mind?</span>
-                <h2 class="font-serif text-5xl md:text-7xl mb-8 reveal-up delay-100">
-                    Your Idea.<br>
-                    <span class="italic text-outline">Our Handmade</span><br>
-                    Magic.
-                </h2>
-                <p class="font-sans text-ink/70 max-w-lg mx-auto mb-10 text-lg reveal-up delay-200">
-                    Want a particular colour, flower style, bouquet combination or gift idea? Tell us what you're imagining and we'll create something especially for you.
-                </p>
-                
-                <div class="reveal-up delay-300">
-                    <a href="https://instagram.com/nammabouquets.house" target="_blank" class="inline-block bg-ink text-ivory font-sans text-sm uppercase tracking-widest px-10 py-5 rounded-full hover:bg-rose transition-colors duration-300 shadow-xl hover:shadow-rose/30 hover-explore-trigger">
-                        Customize Your Flowers
-                    </a>
-                    <p class="font-sans text-xs text-ink/50 tracking-widest uppercase mt-6">DM us your idea • Tell us your colours • Make it yours</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-24 border-t border-ink/10 pt-16 reveal-up delay-400">
-                    <div class="text-center md:text-left relative">
-                        <span class="absolute -top-10 left-1/2 md:left-0 transform -translate-x-1/2 md:translate-x-0 font-serif text-8xl text-beige/30 z-[-1]">01</span>
-                        <h4 class="font-sans font-medium uppercase tracking-widest text-sm mb-3">Share Your Idea</h4>
-                        <p class="font-sans text-ink/70 text-sm">Tell us what you have in mind, from colors to specific flowers.</p>
+        <section id="story" class="py-24 md:py-32 bg-ivory">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-center">
+                    <div class="md:col-span-5 order-2 md:order-1">
+                        <div class="image-zoom-container organic-shape-2 h-[60vh] md:h-[70vh] shadow-xl reveal-up">
+                            <img src="purple.jpeg" alt="Crafting handmade flowers" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2QxZDFkMSIvPjwvc3ZnPg=='">
+                        </div>
                     </div>
-                    <div class="text-center md:text-left relative">
-                        <span class="absolute -top-10 left-1/2 md:left-0 transform -translate-x-1/2 md:translate-x-0 font-serif text-8xl text-beige/30 z-[-1]">02</span>
-                        <h4 class="font-sans font-medium uppercase tracking-widest text-sm mb-3">We Create</h4>
-                        <p class="font-sans text-ink/70 text-sm">Your handmade bouquet or gift is crafted with careful attention to detail.</p>
-                    </div>
-                    <div class="text-center md:text-left relative">
-                        <span class="absolute -top-10 left-1/2 md:left-0 transform -translate-x-1/2 md:translate-x-0 font-serif text-8xl text-beige/30 z-[-1]">03</span>
-                        <h4 class="font-sans font-medium uppercase tracking-widest text-sm mb-3">Make Someone Smile</h4>
-                        <p class="font-sans text-ink/70 text-sm">Receive a beautiful creation made especially for your moment.</p>
+                    
+                    <div class="md:col-span-7 order-1 md:order-2">
+                        <span class="font-sans text-[10px] uppercase tracking-[0.2em] text-leaf mb-6 block reveal-up">THE STORY BEHIND THE FLOWERS</span>
+                        <h2 class="font-serif text-4xl md:text-6xl leading-tight mb-8 reveal-up delay-100">
+                            Made by Hand.<br>
+                            <span class="italic text-leaf">Made to Be Remembered.</span>
+                        </h2>
+                        
+                        <div class="font-sans text-base md:text-lg text-ink/80 max-w-lg space-y-6 reveal-up delay-200">
+                            <p>At nammabouquets.house, we believe a gift becomes significantly more special when it feels personal.</p>
+                            <p>Every handmade pipe cleaner flower is carefully shaped, arranged, and finished with attention to the subtle details that make a bouquet feel truly yours.</p>
+                            <p>Whether you're celebrating a milestone, surprising a friend, or simply saying "I was thinking of you", we create flowers and gifts that carry a little more meaning and last far longer than traditional blooms.</p>
+                        </div>
+                        
+                        <div class="mt-12 reveal-up delay-300">
+                            <p class="font-hand text-3xl text-rose mb-1">nammabouquets.house</p>
+                            <p class="font-sans text-[10px] uppercase tracking-widest text-ink/50">Handmade with care in Kalaburagi</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-24 bg-blush/20">
+        <!-- Refined Editorial Trust Section -->
+        <section class="py-24 bg-blush/15">
             <div class="container mx-auto px-6 md:px-12">
                 <div class="text-center mb-16 reveal-up max-w-2xl mx-auto">
-                    <h2 class="font-serif text-4xl mb-4">Loved by the People We Create For</h2>
-                    <p class="font-sans text-ink/70 text-sm">Every order has a story. Here are a few words from the people who made us part of theirs.</p>
+                    <span class="font-sans text-[10px] uppercase tracking-[0.2em] text-rose mb-4 block">LOVED BY OUR CUSTOMERS</span>
+                    <h2 class="font-serif text-4xl mb-4">Every Order Has a Story</h2>
+                    <p class="font-sans text-ink/70 text-sm">A few words from the people who have made our handmade creations part of their beautiful moments.</p>
                     <svg class="w-6 mx-auto mt-6 text-rose" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-ivory p-8 rounded-3xl shadow-sm reveal-up delay-100 relative hover:-translate-y-2 transition-transform duration-300">
-                        <span class="absolute top-4 right-6 font-serif text-6xl text-beige/50">"</span>
-                        <div class="flex text-gold mb-4 text-sm">★★★★★</div>
-                        <p class="font-sans text-ink/80 mb-6 relative z-10 italic">"Absolutely beautiful handmade flowers. The attention to detail is incredible and it made the perfect gift for my friend. Highly recommend!"</p>
-                        <p class="font-sans text-sm font-medium uppercase tracking-wider">— [Customer Name]</p>
-                        <p class="font-sans text-xs text-leaf mt-1 flex items-center gap-1"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Verified Customer</p>
+                    <!-- Clean, editable review structure. Easily updatable. -->
+                    <div class="bg-ivory p-8 md:p-10 rounded-3xl shadow-sm border border-ink/5 reveal-up delay-100 relative group">
+                        <span class="absolute top-4 right-6 font-serif text-6xl text-beige/40 group-hover:text-rose/30 transition-colors">"</span>
+                        <p class="font-sans text-ink/80 text-sm leading-relaxed mb-8 relative z-10 italic">"The bouquet was even more beautiful than I expected. The customization made it feel so incredibly personal and thoughtful."</p>
+                        <div class="mt-auto border-t border-ink/5 pt-4">
+                            <p class="font-serif text-xl text-ink">— Priya</p>
+                            <p class="font-sans text-[10px] text-ink/50 uppercase tracking-widest mt-1">Custom Bouquet • Kalaburagi</p>
+                        </div>
                     </div>
-                    <div class="bg-ivory p-8 rounded-3xl shadow-sm reveal-up delay-200 relative hover:-translate-y-2 transition-transform duration-300">
-                        <span class="absolute top-4 right-6 font-serif text-6xl text-beige/50">"</span>
-                        <div class="flex text-gold mb-4 text-sm">★★★★★</div>
-                        <p class="font-sans text-ink/80 mb-6 relative z-10 italic">"I customized a bouquet and it turned out exactly how I imagined. The pipe cleaner flowers look so pretty and I love that they will last forever."</p>
-                        <p class="font-sans text-sm font-medium uppercase tracking-wider">— [Customer Name]</p>
-                        <p class="font-sans text-xs text-leaf mt-1 flex items-center gap-1"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Verified Customer</p>
+                    
+                    <div class="bg-ivory p-8 md:p-10 rounded-3xl shadow-sm border border-ink/5 reveal-up delay-200 relative group">
+                        <span class="absolute top-4 right-6 font-serif text-6xl text-beige/40 group-hover:text-rose/30 transition-colors">"</span>
+                        <p class="font-sans text-ink/80 text-sm leading-relaxed mb-8 relative z-10 italic">"I love that these will last forever. Such a unique gift idea and the craftsmanship on the pipe cleaner flowers is amazing."</p>
+                        <div class="mt-auto border-t border-ink/5 pt-4">
+                            <p class="font-serif text-xl text-ink">— Aisha</p>
+                            <p class="font-sans text-[10px] text-ink/50 uppercase tracking-widest mt-1">Gift Order • Kalaburagi</p>
+                        </div>
                     </div>
-                    <div class="bg-ivory p-8 rounded-3xl shadow-sm reveal-up delay-300 relative hover:-translate-y-2 transition-transform duration-300">
-                        <span class="absolute top-4 right-6 font-serif text-6xl text-beige/50">"</span>
-                        <div class="flex text-gold mb-4 text-sm">★★★★★</div>
-                        <p class="font-sans text-ink/80 mb-6 relative z-10 italic">"Such a thoughtful and unique gift idea! The packaging was gorgeous and the craftsmanship is amazing. Will definitely be ordering again."</p>
-                        <p class="font-sans text-sm font-medium uppercase tracking-wider">— [Customer Name]</p>
-                        <p class="font-sans text-xs text-leaf mt-1 flex items-center gap-1"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Verified Customer</p>
+                    
+                    <div class="bg-ivory p-8 md:p-10 rounded-3xl shadow-sm border border-ink/5 reveal-up delay-300 relative group">
+                        <span class="absolute top-4 right-6 font-serif text-6xl text-beige/40 group-hover:text-rose/30 transition-colors">"</span>
+                        <p class="font-sans text-ink/80 text-sm leading-relaxed mb-8 relative z-10 italic">"The attention to detail is incredible. The packaging was gorgeous, making the entire unboxing experience feel so premium."</p>
+                        <div class="mt-auto border-t border-ink/5 pt-4">
+                            <p class="font-serif text-xl text-ink">— Neha</p>
+                            <p class="font-sans text-[10px] text-ink/50 uppercase tracking-widest mt-1">Floral Accessories</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1021,34 +738,82 @@
         <section class="py-24 bg-ivory">
             <div class="container mx-auto px-6 md:px-12">
                 <div class="text-center mb-16 reveal-up">
-                    <h2 class="font-serif text-5xl mb-4">See What We're Making</h2>
-                    <p class="font-sans text-ink/70 max-w-lg mx-auto mb-8">More flowers. More ideas. More little moments. Follow us on Instagram for new creations, custom orders and behind-the-scenes making.</p>
-                    <a href="https://instagram.com/nammabouquets.house" target="_blank" class="inline-flex items-center gap-2 font-sans text-sm font-medium uppercase tracking-widest text-rose hover:text-ink transition-colors hover-text-trigger">
-                        Follow @nammabouquets.house <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    <h2 class="font-serif text-4xl md:text-5xl mb-4">A Living Extension of Our Brand</h2>
+                    <p class="font-sans text-ink/70 max-w-lg mx-auto mb-8 text-sm md:text-base">More flowers. More ideas. More little moments. Follow us for new creations, custom orders, and behind-the-scenes magic.</p>
+                    <a href="https://instagram.com/nammabouquets.house" target="_blank" class="inline-flex items-center gap-2 font-sans text-xs font-medium uppercase tracking-[0.15em] text-rose hover:text-ink transition-colors hover-text-trigger">
+                        See More on Instagram <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                     </a>
                 </div>
 
                 <div class="instagram-grid reveal-up delay-200">
-                    <a href="https://instagram.com/nammabouquets.house" target="_blank" class="relative block overflow-hidden rounded-xl group tall">
-                        <img src="yellow.png" alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <a href="https://instagram.com/nammabouquets.house" target="_blank" class="relative block overflow-hidden rounded-xl group tall bg-beige/30">
+                        <img src="yellow.png" alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.style.display='none'">
                         <div class="absolute inset-0 bg-ink/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                             <svg class="w-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                         </div>
                     </a>
-                    <a href="https://instagram.com/nammabouquets.house" target="_blank" class="relative block overflow-hidden rounded-xl group">
-                        <img src="red.jpeg" alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <a href="https://instagram.com/nammabouquets.house" target="_blank" class="relative block overflow-hidden rounded-xl group bg-blush/30">
+                        <img src="red.jpeg" alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.style.display='none'">
                         <div class="absolute inset-0 bg-ink/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                             <svg class="w-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                         </div>
                     </a>
-                    <a href="https://instagram.com/nammabouquets.house" target="_blank" class="relative block overflow-hidden rounded-xl group">
-                        <img src="purple.jpeg" alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <a href="https://instagram.com/nammabouquets.house" target="_blank" class="relative block overflow-hidden rounded-xl group bg-leaf/20">
+                        <img src="purple.jpeg" alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.style.display='none'">
                         <div class="absolute inset-0 bg-ink/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                             <svg class="w-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                         </div>
                     </a>
-                    <a href="https://instagram.com/nammabouquets.house" target="_blank" class="relative block overflow-hidden rounded-xl group tall">
-                        <img src="flower.jpeg" alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <a href="https://instagram.com/nammabouquets.house" target="_blank" class="relative block overflow-hidden rounded-xl group tall bg-rose/20">
+                        <img src="flower.jpeg" alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.style.display='none'">
+                        <div class="absolute inset-0 bg-ink/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <svg class="w-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </div>
+                    </a>
+                    <a href="https://instagram.com/nammabouquets.house" target="_blank" class="relative block overflow-hidden rounded-xl group tall bg-rose/20">
+                        <img src="TEDDY MUG_300.jpg" alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.style.display='none'">
+                        <div class="absolute inset-0 bg-ink/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <svg class="w-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </div>
+                    </a>
+                    <a href="https://instagram.com/nammabouquets.house" target="_blank" class="relative block overflow-hidden rounded-xl group tall bg-rose/20">
+                        <img src="SWAN_400.jpg" alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.style.display='none'">
+                        <div class="absolute inset-0 bg-ink/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <svg class="w-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </div>
+                    </a>
+                    <a href="https://instagram.com/nammabouquets.house" target="_blank" class="relative block overflow-hidden rounded-xl group tall bg-rose/20">
+                        <img src="SINGLE TILIPS_50.jpg" alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.style.display='none'">
+                        <div class="absolute inset-0 bg-ink/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <svg class="w-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </div>
+                    </a>
+                    <a href="https://instagram.com/nammabouquets.house" target="_blank" class="relative block overflow-hidden rounded-xl group tall bg-rose/20">
+                        <img src="LILIES_999.jpg" alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.style.display='none'">
+                        <div class="absolute inset-0 bg-ink/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <svg class="w-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </div>
+                    </a>
+                    <a href="https://instagram.com/nammabouquets.house" target="_blank" class="relative block overflow-hidden rounded-xl group tall bg-rose/20">
+                        <img src="DANCING_350.jpg" alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.style.display='none'">
+                        <div class="absolute inset-0 bg-ink/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <svg class="w-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </div>
+                    </a>
+                    <a href="https://instagram.com/nammabouquets.house" target="_blank" class="relative block overflow-hidden rounded-xl group tall bg-rose/20">
+                        <img src="DIYA _250.jpg" alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.style.display='none'">
+                        <div class="absolute inset-0 bg-ink/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <svg class="w-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </div>
+                    </a>
+                    <a href="https://instagram.com/nammabouquets.house" target="_blank" class="relative block overflow-hidden rounded-xl group tall bg-rose/20">
+                        <img src="DIYA HOLDER ONE _250.jpg" alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.style.display='none'">
+                        <div class="absolute inset-0 bg-ink/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <svg class="w-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </div>
+                    </a>
+                    <a href="https://instagram.com/nammabouquets.house" target="_blank" class="relative block overflow-hidden rounded-xl group tall bg-rose/20">
+                        <img src="KEY CHAINS_50.jpg" alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.style.display='none'">
                         <div class="absolute inset-0 bg-ink/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                             <svg class="w-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                         </div>
@@ -1057,15 +822,20 @@
             </div>
         </section>
 
-        <section class="py-24 bg-rose text-ivory text-center">
-            <div class="container mx-auto px-6 max-w-2xl reveal-up">
-                <h2 class="font-serif text-5xl md:text-6xl mb-6">Someone Deserves a Little Beautiful Today.</h2>
-                <p class="font-sans text-ivory/90 mb-10 text-lg">Choose a bouquet, pick a gift or create something completely your own.</p>
-                <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
-                    <button type="button" id="openCustomizeModalBottom" class="bg-ivory text-ink font-sans text-sm uppercase tracking-widest px-8 py-4 rounded-full hover:bg-beige transition-colors shadow-lg hover-explore-trigger w-full sm:w-auto">
-                        Customize Your Flowers &rarr;
+        <!-- Final Emotional CTA -->
+        <section class="py-24 md:py-32 bg-ink text-ivory text-center relative overflow-hidden">
+            <div class="absolute -top-32 -left-32 w-96 h-96 bg-leaf rounded-full mix-blend-overlay filter blur-[100px] opacity-40"></div>
+            <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-rose rounded-full mix-blend-overlay filter blur-[100px] opacity-40"></div>
+            
+            <div class="container mx-auto px-6 max-w-3xl reveal-up relative z-10">
+                <span class="font-hand text-3xl md:text-4xl text-rose mb-4 block">Handmade with care</span>
+                <h2 class="font-serif text-5xl md:text-7xl mb-6">Someone Deserves Something Beautiful Today.</h2>
+                <p class="font-sans text-ivory/80 mb-12 text-sm md:text-base max-w-lg mx-auto">Handmade flowers, made especially for your moment. Choose a bouquet or create something completely your own.</p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-6 w-full sm:w-auto">
+                    <button class="btn-customize bg-ivory text-ink font-sans text-xs uppercase tracking-[0.15em] px-8 py-4 rounded-full hover:bg-blush hover:text-ink transition-colors shadow-lg shadow-ivory/10 hover-explore-trigger w-full sm:w-auto">
+                        Create Your Bouquet
                     </button>
-                    <a href="#creations" class="font-sans text-sm uppercase tracking-widest hover:text-ink transition-colors border-b border-ivory pb-1 hover-text-trigger">
+                    <a href="#shop" class="font-sans text-xs uppercase tracking-[0.15em] hover:text-rose transition-colors border-b border-ivory/40 pb-1 hover:border-rose hover-text-trigger">
                         Explore Bouquets
                     </a>
                 </div>
@@ -1073,118 +843,174 @@
         </section>
     </main>
 
-    <footer class="bg-ink text-ivory pt-24 pb-12 relative overflow-hidden">
-        <svg class="absolute -right-24 -top-24 w-96 text-ivory/5 pointer-events-none" viewBox="0 0 100 100" fill="currentColor">
-            <path d="M50 0 C60 30, 80 40, 100 50 C80 60, 60 70, 50 100 C40 70, 20 60, 0 50 C20 40, 40 30, 50 0 Z"/>
-        </svg>
-
+    <footer class="bg-ink text-ivory pt-16 pb-8 relative overflow-hidden border-t border-ivory/10">
         <div class="container mx-auto px-6 md:px-12 relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
                 
-                <div class="md:col-span-4">
-                    <h2 class="font-serif text-4xl mb-4">Ready to Give<br><span class="italic text-rose">Something Beautiful?</span></h2>
-                    <p class="font-sans text-ivory/70 text-sm mb-8 max-w-xs leading-relaxed">Handmade flowers. Thoughtful gifts. Beautiful little moments — created with love in Kalaburagi.</p>
-                    
-                    <a href="https://instagram.com/nammabouquets.house" target="_blank" class="inline-flex items-center gap-3 font-sans text-sm uppercase tracking-widest hover:text-rose transition-colors hover-text-trigger">
-                        <div class="w-10 h-10 rounded-full border border-ivory/30 flex items-center justify-center">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                <div class="md:col-span-5">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full border border-ivory/20 flex items-center justify-center overflow-hidden bg-ivory/5">
+                             <img src="logo.jpg" alt="Logo" class="w-full h-full object-cover opacity-80" onerror="this.style.display='none'">
                         </div>
-                        @nammabouquets.house
+                        <h2 class="font-serif text-2xl tracking-widest uppercase">nammabouquets.house</h2>
+                    </div>
+                    <p class="font-sans text-ivory/60 text-sm mb-8 max-w-sm leading-relaxed">Handmade flowers. Thoughtful gifts. Beautiful little moments — crafted with love in Kalaburagi.</p>
+                    
+                    <a href="https://instagram.com/nammabouquets.house" target="_blank" class="inline-flex items-center gap-3 font-sans text-xs uppercase tracking-[0.15em] text-ivory/80 hover:text-rose transition-colors hover-text-trigger">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        Follow on Instagram
                     </a>
                 </div>
 
-                <div class="md:col-span-2 md:col-start-7">
-                    <h4 class="font-sans uppercase text-xs tracking-widest text-ivory/50 mb-6">Shop</h4>
-                    <ul class="space-y-4 font-sans text-sm">
-                        <li><a href="#creations" class="hover:text-rose transition-colors">Bouquets</a></li>
-                        <li><a href="#creations" class="hover:text-rose transition-colors">Gifts</a></li>
-                        <li><a href="#creations" class="hover:text-rose transition-colors">Floral Accessories</a></li>
-                        <li><a href="#custom" class="hover:text-rose transition-colors">Customize</a></li>
+                <div class="md:col-span-2 md:col-start-8">
+                    <h4 class="font-sans uppercase text-[10px] tracking-[0.2em] text-ivory/40 mb-5">Shop</h4>
+                    <ul class="space-y-3 font-sans text-sm text-ivory/80">
+                        <li><a href="#shop" class="hover:text-rose transition-colors">Bouquets</a></li>
+                        <li><a href="#shop" class="hover:text-rose transition-colors">Gifts</a></li>
+                        <li><a href="#shop" class="hover:text-rose transition-colors">Floral Accessories</a></li>
                     </ul>
                 </div>
 
-                <div class="md:col-span-2">
-                    <h4 class="font-sans uppercase text-xs tracking-widest text-ivory/50 mb-6">Discover</h4>
-                    <ul class="space-y-4 font-sans text-sm">
+                <div class="md:col-span-3">
+                    <h4 class="font-sans uppercase text-[10px] tracking-[0.2em] text-ivory/40 mb-5">Discover</h4>
+                    <ul class="space-y-3 font-sans text-sm text-ivory/80">
+                        <li><button class="btn-customize hover:text-rose transition-colors">Create Your Bouquet</button></li>
                         <li><a href="#story" class="hover:text-rose transition-colors">Our Story</a></li>
-                        <li><a href="https://instagram.com/nammabouquets.house" target="_blank" class="hover:text-rose transition-colors">Instagram</a></li>
-                        <li><a href="#custom" class="hover:text-rose transition-colors">Contact</a></li>
-                        <li><a href="#" class="hover:text-rose transition-colors">FAQs</a></li>
-                    </ul>
-                </div>
-
-                <div class="md:col-span-2">
-                    <h4 class="font-sans uppercase text-xs tracking-widest text-ivory/50 mb-6">Order</h4>
-                    <ul class="space-y-4 font-sans text-sm">
-                        <li><a href="#custom" class="hover:text-rose transition-colors">Customize Your Flowers</a></li>
-                        <li><a href="#custom" class="hover:text-rose transition-colors">DM to Order</a></li>
-                        <li class="pt-4 text-ivory/60 flex items-start gap-2">
-                            <svg class="w-4 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <li class="pt-4 text-ivory/50 flex items-start gap-2 text-xs">
+                            <svg class="w-3.5 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                             Kalaburagi, Karnataka
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="border-t border-ivory/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
-                <div>
-                    <div class="font-serif text-2xl tracking-widest uppercase">Namma Bouquets</div>
-                    <div class="font-sans text-xs text-rose uppercase tracking-widest mt-1">Flowers • Gifts • Floral Accessories</div>
+            <div class="border-t border-ivory/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+                <div class="font-sans text-[10px] text-ivory/40 uppercase tracking-[0.15em]">
+                    &copy; <script>document.write(new Date().getFullYear())</script> nammabouquets.house. All rights reserved.
                 </div>
-                <div class="font-sans text-xs text-ivory/40 uppercase tracking-widest">
-                    &copy; 2026 Namma Bouquets. All rights reserved.
-                </div>
+                <div class="mt-8 flex items-center justify-center gap-2 font-sans text-[10px] text-ivory/40 uppercase tracking-[0.18em]">
+    <span>Crafted with intention by</span>
+    
+    <a
+        href="https://codenprofit.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group inline-flex items-center gap-1.5 text-ivory/65 transition-all duration-300 hover:text-ivory"
+        aria-label="CodenProfit — Web & Digital Solutions"
+    >
+        <span class="relative">
+            CodenProfit
+            <span class="absolute -bottom-0.5 left-0 h-px w-0 bg-current transition-all duration-300 group-hover:w-full"></span>
+        </span>
+
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="opacity-50 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100"
+            aria-hidden="true"
+        >
+            <path d="M7 17L17 7"></path>
+            <path d="M7 7h10v10"></path>
+        </svg>
+    </a>
+</div>
             </div>
         </div>
     </footer>
 
     <!-- ============================================
-         WHATSAPP CUSTOMIZE MODAL
+         WHATSAPP CUSTOMIZE MODAL (Enhanced)
          ============================================ -->
     <div class="nb-modal-overlay" id="customizeModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="customizeModalTitle">
         <div class="nb-modal-card" role="document">
-            <button type="button" class="nb-modal-close" id="closeCustomizeModal" aria-label="Close customize form">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            <button type="button" class="nb-modal-close" id="closeCustomizeModal" aria-label="Close form">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
             </button>
 
             <div class="nb-modal-inner">
                 <!-- FORM VIEW -->
                 <div id="customizeFormView">
-                    <span class="nb-modal-eyebrow">Let's make it yours ✿</span>
-                    <h3 class="nb-modal-title" id="customizeModalTitle">Customize Your <em>Flowers</em></h3>
-                    <p class="nb-modal-sub">Just two quick details and we'll open WhatsApp with your message ready to send.</p>
+                    <span class="nb-modal-eyebrow font-hand text-2xl text-rose block mb-1">Let's make it yours ✿</span>
+                    <h3 class="nb-modal-title font-serif text-3xl md:text-4xl text-ink mb-1" id="customizeModalTitle">Create Your <em>Bouquet</em></h3>
+                    <p class="nb-modal-sub font-sans text-sm text-ink/70 mb-6">Tell us what you're imagining, and we'll prepare a WhatsApp message for you.</p>
 
                     <form id="customizeForm" novalidate>
-                        <div class="nb-field">
-                            <label for="customerName" class="nb-label">Your Name</label>
-                            <input type="text" id="customerName" name="customerName" class="nb-input" placeholder="e.g. Ananya" autocomplete="name" maxlength="60" required>
-                            <div class="nb-error-msg" id="nameError">Please enter your name.</div>
+                        <div class="nb-field-group">
+                            <div class="nb-field">
+                                <label for="cName" class="nb-label">Your Name *</label>
+                                <input type="text" id="cName" class="nb-input" placeholder="e.g. Ananya" required>
+                            </div>
+                            <div class="nb-field">
+                                <label for="cOccasion" class="nb-label">Occasion</label>
+                                <select id="cOccasion" class="nb-input appearance-none bg-white">
+                                    <option value="Just Because">Just Because</option>
+                                    <option value="Birthday">Birthday</option>
+                                    <option value="Anniversary/Love">Anniversary / Love</option>
+                                    <option value="Friendship">Friendship</option>
+                                    <option value="Gift">Gift</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="nb-field-group">
+                            <div class="nb-field">
+                                <label for="cColors" class="nb-label">Preferred Colors</label>
+                                <input type="text" id="cColors" class="nb-input" placeholder="e.g. Soft pinks & white">
+                            </div>
+                            <div class="nb-field">
+                                <label for="cBudget" class="nb-label">Approx. Budget</label>
+                                <select id="cBudget" class="nb-input appearance-none bg-white">
+                                    <option value="Open">Not sure yet</option>
+                                    <option value="Under ₹500">Under ₹500</option>
+                                    <option value="₹500 - ₹1000">₹500 - ₹1000</option>
+                                    <option value="₹1000+">₹1000+</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="nb-field-group">
+                            <div class="nb-field">
+                                <label for="cDate" class="nb-label">Required By Date</label>
+                                <input type="text" id="cDate" class="nb-input" placeholder="e.g. 15th October">
+                            </div>
+                            <div class="nb-field">
+                                <label for="cLocation" class="nb-label">Location *</label>
+                                <input type="text" id="cLocation" class="nb-input" placeholder="e.g. Kalaburagi" required>
+                            </div>
                         </div>
 
                         <div class="nb-field">
-                            <label for="customerLocation" class="nb-label">Your Location</label>
-                            <input type="text" id="customerLocation" name="customerLocation" class="nb-input" placeholder="e.g. Kalaburagi" autocomplete="address-level2" maxlength="80" required>
-                            <div class="nb-error-msg" id="locationError">Please enter your location.</div>
+                            <label for="cMessage" class="nb-label">Any specific details?</label>
+                            <textarea id="cMessage" class="nb-input" placeholder="Tell us more about the flowers, size, or person receiving them..."></textarea>
                         </div>
+
+                        <div id="formErrorMsg" class="hidden font-sans text-xs text-red-500 mb-3 ml-1">Please fill out your Name and Location.</div>
 
                         <button type="submit" class="nb-submit-btn">
-                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                            Customize Now
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                            Open WhatsApp
                         </button>
                     </form>
-
-                    <p class="nb-modal-footnote">Opens WhatsApp • Your message is ready to send</p>
+                    <p class="text-center font-sans text-[10px] uppercase tracking-widest text-ink/40 mt-4">No payment required now</p>
                 </div>
 
                 <!-- SUCCESS VIEW -->
                 <div class="nb-success" id="customizeSuccessView">
                     <div class="nb-success-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="28" height="28" stroke-linecap="round" stroke-linejoin="round" class="text-white"><polyline points="20 6 9 17 4 12"></polyline></svg>
                     </div>
-                    <h3>WhatsApp Opened!</h3>
-                    <p>Your message to Namma Bouquets is ready. Just hit send and we'll take it from there. 🌸</p>
-                    <button type="button" id="resetCustomizeForm" class="nb-submit-btn" style="background: linear-gradient(135deg, #B97880 0%, #292522 100%); box-shadow: 0 12px 28px -8px rgba(41, 37, 34, 0.45); margin-top: 1.5rem;">
-                        Send Another
+                    <h3 class="font-serif text-3xl text-ink mb-2">Message Ready!</h3>
+                    <p class="font-sans text-sm text-ink/70 leading-relaxed max-w-xs mx-auto">Your details have opened in WhatsApp. Just hit send and we'll chat about your bouquet! 🌸</p>
+                    <button type="button" id="resetCustomizeForm" class="mt-6 font-sans text-xs uppercase tracking-[0.15em] border-b border-ink/40 pb-0.5 hover:border-ink transition-colors text-ink">
+                        Start Another
                     </button>
                 </div>
             </div>
@@ -1192,20 +1018,156 @@
     </div>
 
     <script>
+        // ============================================
+        // EDITABLE PRODUCT DATA STRUCTURE
+        // Extremely easy for business owner to replace
+        // ============================================
+        const products = [
+            { 
+                id: 1, 
+                name: "Sunshine Daisy", 
+                category: "Bouquet", 
+                price: "₹499", 
+                image: "yellow.png", 
+                desc: "Handmade floral arrangement designed to brighten someone's day with soft yellow blooms.", 
+                customizable: true 
+            },
+            { 
+                id: 2, 
+                name: "Blush Rose Classic", 
+                category: "Bouquet", 
+                price: "₹699", 
+                image: "pink.jpeg", 
+                desc: "Elegant pink pipe cleaner roses wrapped carefully in premium paper.", 
+                customizable: true 
+            },
+            { 
+                id: 3, 
+                name: "Midnight Purple", 
+                category: "Bouquet", 
+                price: "₹599", 
+                image: "purple.jpeg", 
+                desc: "Deep purple handmade blooms perfect for someone truly special.", 
+                customizable: true 
+            },
+            { 
+                id: 4, 
+                name: "Crimson Love", 
+                category: "Bouquet", 
+                price: "₹799", 
+                image: "red.jpeg", 
+                desc: "A timeless arrangement of handmade red roses that will last forever.", 
+                customizable: true 
+            },
+            { 
+                id: 5, 
+                name: "Little Birds Charm", 
+                category: "Accessory", 
+                price: "₹299", 
+                image: "birds.png", 
+                desc: "Delicate handmade floral details to add charm to your space or gift.", 
+                customizable: false 
+            },
+            { 
+                id: 6, 
+                name: "Dancing Tulips", 
+                category: "Bouquet", 
+                price: "350", 
+                image: "DANCING_350.jpg", 
+                desc: "A bouquet that blooms with joy, bringing playful elegance and effortless charm to every moment.", 
+                customizable: true 
+            },
+            { 
+                id: 7, 
+                name: "Pastel Assortment", 
+                category: "Gift", 
+                price: "₹899", 
+                image: "accessries.png", 
+                desc: "A soft, beautiful mix of pastel pipe cleaner flowers perfect for gifting.", 
+                customizable: true 
+            },
+            { 
+                id: 8, 
+                name: "Diya Holders ( pair )", 
+                category: "Bouquet", 
+                price: "₹250", 
+                image: "DIYA _250.jpg", 
+                desc: " Twin diya holders crafted to add warmth, tradition, and a graceful glow to every celebration.", 
+                customizable: true 
+            },
+            { 
+                id: 10, 
+                name: "Diya Holder ( single )", 
+                category: "Bouquet", 
+                price: "₹250", 
+                image: "DIYA HOLDER ONE _250.jpg", 
+                desc: " diya holder crafted to add warmth, tradition, and a graceful glow to every celebration.", 
+                customizable: true 
+            },
+            { 
+                id: 9, 
+                name: "KEY CHAINS ( EACH ONE)", 
+                category: "Gift", 
+                price: "₹50", 
+                image: "KEY CHAINS_50.jpg", 
+                desc: "Tiny keepsakes, big memories—crafted to carry a little piece of joy wherever you go.", 
+                customizable: true 
+            },
+            { 
+                id: 11, 
+                name: "Lilies With Tulips", 
+                category: "Gift", 
+                price: "₹999", 
+                image: "LILIES_999.jpg", 
+                desc: "A thoughtful blend of lilies and tulips, made to celebrate friendship and unforgettable little moments.", 
+                customizable: true 
+            },
+            { 
+                id: 12, 
+                name: "Single Tulips ( Each - 50)", 
+                category: "Bouquet", 
+                price: "₹50", 
+                image: "SINGLE TILIPS_50.jpg", 
+                desc: "A single tulip, thoughtfully crafted to add a touch of beauty, warmth, and elegance to any moment.", 
+                customizable: true 
+            },
+            { 
+                id: 13, 
+                name: "SWAN", 
+                category: "Gift", 
+                price: "₹400", 
+                image: "SWAN_400.jpg", 
+                desc: "A graceful swan bouquet, beautifully crafted to make your friend’s special moments feel truly unforgettable.", 
+                customizable: true 
+            },
+            { 
+                id: 14, 
+                name: "TEDDY MUG", 
+                category: "Gift", 
+                price: "₹300", 
+                image: "TEDDY MUG_300.jpg", 
+                desc: "A cute little teddy mug, bringing warmth, smiles, and adorable charm to every coffee break.", 
+                customizable: true 
+            }
+        ];
+
+        // The WhatsApp number for all orders and customizations
+        const WHATSAPP_NUMBER = '917743805933';
+
         document.addEventListener('DOMContentLoaded', () => {
             
+            // --- Preloader Optimization ---
             const preloader = document.getElementById('preloader');
             const brandText = document.querySelector('.preloader-brand');
-            const subText = document.querySelector('.preloader-sub');
             const tagline = document.querySelector('.preloader-tagline');
             
             setTimeout(() => { 
                 brandText.style.transform = 'translateY(0)'; 
                 brandText.style.opacity = '1'; 
-            }, 1200);
-            setTimeout(() => { subText.style.opacity = '1'; }, 1600);
-            setTimeout(() => { tagline.style.opacity = '1'; }, 2200);
+            }, 600);
+            setTimeout(() => { tagline.style.opacity = '1'; }, 1000);
             
+            // Reduced forced delay significantly for better UX
             setTimeout(() => {
                 document.body.classList.add('loaded');
                 
@@ -1214,8 +1176,9 @@
                     word.style.transform = 'translateY(0)';
                     word.style.transition = 'transform 0.8s cubic-bezier(0.25, 1, 0.5, 1)';
                 });
-            }, 3600);
+            }, 1800);
 
+            // --- Custom Cursor ---
             const cursor = document.getElementById('cursor');
             let mouseX = 0, mouseY = 0;
             let cursorX = 0, cursorY = 0;
@@ -1237,101 +1200,110 @@
                 }
                 animateCursor();
 
-                const viewTriggers = document.querySelectorAll('.hover-view-trigger');
-                viewTriggers.forEach(el => {
-                    el.addEventListener('mouseenter', () => cursor.classList.add('hover-view'));
-                    el.addEventListener('mouseleave', () => cursor.classList.remove('hover-view'));
-                });
-
-                const exploreTriggers = document.querySelectorAll('.hover-explore-trigger');
-                exploreTriggers.forEach(el => {
-                    el.addEventListener('mouseenter', () => cursor.classList.add('hover-explore'));
-                    el.addEventListener('mouseleave', () => cursor.classList.remove('hover-explore'));
-                });
-
-                const textTriggers = document.querySelectorAll('.hover-text-trigger, a, button');
-                textTriggers.forEach(el => {
-                    if(!el.classList.contains('hover-view-trigger') && !el.classList.contains('hover-explore-trigger')){
-                        el.addEventListener('mouseenter', () => cursor.classList.add('hover-text'));
-                        el.addEventListener('mouseleave', () => cursor.classList.remove('hover-text'));
-                    }
-                });
+                function attachCursorEvents() {
+                    document.querySelectorAll('.hover-view-trigger').forEach(el => {
+                        el.addEventListener('mouseenter', () => cursor.classList.add('hover-view'));
+                        el.addEventListener('mouseleave', () => cursor.classList.remove('hover-view'));
+                    });
+                    document.querySelectorAll('.hover-explore-trigger').forEach(el => {
+                        el.addEventListener('mouseenter', () => cursor.classList.add('hover-explore'));
+                        el.addEventListener('mouseleave', () => cursor.classList.remove('hover-explore'));
+                    });
+                    document.querySelectorAll('.hover-text-trigger, a, button').forEach(el => {
+                        if(!el.classList.contains('hover-view-trigger') && !el.classList.contains('hover-explore-trigger')){
+                            el.addEventListener('mouseenter', () => cursor.classList.add('hover-text'));
+                            el.addEventListener('mouseleave', () => cursor.classList.remove('hover-text'));
+                        }
+                    });
+                }
             }
 
-            const petalContainer = document.getElementById('petal-container');
+            // --- Petals ---
             const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            
-            if (!prefersReducedMotion) {
-                const petalCount = isDesktop ? 6 : 2; 
-                
-                function createPetal() {
+            if (!prefersReducedMotion && isDesktop) {
+                const petalContainer = document.getElementById('petal-container');
+                for(let i=0; i<4; i++) {
                     const petal = document.createElement('div');
                     petal.classList.add('falling-petal');
-                    
                     const size = Math.random() * 12 + 8;
-                    const startX = Math.random() * 100 + 'vw';
-                    const endX = (Math.random() * 100 - 50) + 'vw';
-                    const duration = Math.random() * 15 + 15 + 's'; 
-                    const endRot = Math.random() * 360 + 180 + 'deg';
-                    const delay = Math.random() * 10 + 's';
-
                     petal.style.width = `${size}px`;
                     petal.style.height = `${size * 2}px`;
-                    petal.style.setProperty('--start-x', startX);
-                    petal.style.setProperty('--end-x', endX);
-                    petal.style.setProperty('--duration', duration);
-                    petal.style.setProperty('--end-rot', endRot);
-                    petal.style.animationDelay = delay;
-
+                    petal.style.setProperty('--start-x', Math.random() * 100 + 'vw');
+                    petal.style.setProperty('--end-x', (Math.random() * 100 - 50) + 'vw');
+                    petal.style.setProperty('--duration', Math.random() * 15 + 15 + 's');
+                    petal.style.setProperty('--end-rot', Math.random() * 360 + 180 + 'deg');
+                    petal.style.animationDelay = Math.random() * 10 + 's';
                     petalContainer.appendChild(petal);
-                }
-
-                for(let i=0; i<petalCount; i++) {
-                    createPetal();
                 }
             }
 
-            const revealElements = document.querySelectorAll('.reveal-up');
-            const revealOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
+            // --- Product Injection ---
+            const productGrid = document.getElementById('product-grid');
+            if (productGrid) {
+                productGrid.innerHTML = products.map(p => `
+                    <div class="group flex flex-col reveal-up">
+                        <div class="relative image-zoom-container rounded-2xl h-[45vh] bg-ink/5 overflow-hidden mb-5 cursor-pointer" onclick="orderProduct('${p.name}', '${p.price}')">
+                            <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover p-6 mix-blend-multiply hover-view-trigger" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2QxZDFkMSIvPjwvc3ZnPg=='">
+                            ${p.customizable ? `<div class="absolute top-4 left-4 bg-ivory/90 backdrop-blur-sm text-ink text-[9px] font-medium uppercase tracking-[0.2em] px-4 py-1.5 rounded-full shadow-sm">Customizable</div>` : ''}
+                        </div>
+                        <div class="flex justify-between items-start mb-2 px-1">
+                            <div>
+                                <p class="font-sans text-[10px] uppercase tracking-[0.2em] text-leaf mb-1">${p.category}</p>
+                                <h3 class="font-serif text-2xl text-ink leading-none">${p.name}</h3>
+                            </div>
+                            <p class="font-sans text-sm font-medium text-ink bg-white px-3 py-1 rounded-full border border-ink/10 whitespace-nowrap">From ${p.price}</p>
+                        </div>
+                        <p class="font-sans text-sm text-ink/70 mb-5 px-1 leading-relaxed">${p.desc}</p>
+                        <div class="mt-auto px-1">
+                            <button onclick="orderProduct('${p.name}', '${p.price}')" class="w-full font-sans text-xs uppercase tracking-[0.15em] border border-ink text-ink py-3 rounded-full hover:bg-ink hover:text-ivory transition-colors hover-text-trigger">
+                                Order on WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                `).join('');
+                
+                if(isDesktop) attachCursorEvents();
+            }
 
+            // --- Scroll Reveal & Parallax ---
+            const revealElements = document.querySelectorAll('.reveal-up');
             const revealObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
-                    if (!entry.isIntersecting) return;
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target);
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
                 });
-            }, revealOptions);
+            }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
 
             if (!prefersReducedMotion) {
                 revealElements.forEach(el => revealObserver.observe(el));
+                
+                const parallaxElements = document.querySelectorAll('.hero-parallax');
+                window.addEventListener('scroll', () => {
+                    if(window.scrollY < window.innerHeight) {
+                        parallaxElements.forEach(el => {
+                            el.style.transform = `translateY(${window.pageYOffset * el.dataset.speed}px)`;
+                        });
+                    }
+                }, {passive: true});
             } else {
                 revealElements.forEach(el => el.classList.add('is-visible'));
             }
 
-            // NAVBAR: original behavior — mix-blend-difference at top, ivory bg on scroll
+            // --- Navbar Scrolled State ---
             const navbar = document.getElementById('navbar');
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 50) {
-                    navbar.classList.add('scrolled');
+                    navbar.classList.add('scrolled', 'text-ink');
                     navbar.classList.remove('mix-blend-difference', 'text-ivory');
-                    navbar.classList.add('text-ink');
                 } else {
                     navbar.classList.remove('scrolled', 'text-ink');
                     navbar.classList.add('mix-blend-difference', 'text-ivory');
                 }
-            });
+            }, {passive: true});
 
-            if (!prefersReducedMotion) {
-                const parallaxElements = document.querySelectorAll('.hero-parallax');
-                window.addEventListener('scroll', () => {
-                    const scrolled = window.pageYOffset;
-                    parallaxElements.forEach(el => {
-                        const speed = el.dataset.speed;
-                        el.style.transform = `translateY(${scrolled * speed}px)`;
-                    });
-                });
-            }
-
+            // --- Horizontal Occasions Scroll (Desktop) ---
             const horizontalWrapper = document.getElementById('horizontal-wrapper');
             const horizontalTrack = document.getElementById('horizontal-track');
             
@@ -1341,37 +1313,69 @@
                     if (rect.top <= 0 && rect.bottom >= window.innerHeight) {
                         const scrollPercent = Math.abs(rect.top) / (rect.height - window.innerHeight);
                         const maxScroll = horizontalTrack.scrollWidth - window.innerWidth;
-                        const translateX = scrollPercent * maxScroll;
-                        horizontalTrack.style.transform = `translate3d(-${translateX}px, 0, 0)`;
+                        horizontalTrack.style.transform = `translate3d(-${scrollPercent * maxScroll}px, 0, 0)`;
                     } else if (rect.top > 0) {
                         horizontalTrack.style.transform = `translate3d(0, 0, 0)`;
                     }
-                });
+                }, {passive: true});
             }
 
-            /* ============================================
-               WHATSAPP CUSTOMIZE MODAL LOGIC
-               ============================================ */
-            const WHATSAPP_NUMBER = '917743805933';
+            // --- Mobile Menu Toggle ---
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link, .btn-customize');
+            let isMenuOpen = false;
+
+            function toggleMenu() {
+                isMenuOpen = !isMenuOpen;
+                mobileMenuBtn.classList.toggle('menu-open');
+                if (isMenuOpen) {
+                    mobileMenu.classList.add('is-open');
+                    document.body.style.overflow = 'hidden'; // lock scroll
+                    navbar.classList.remove('mix-blend-difference', 'text-ivory');
+                    navbar.classList.add('text-ink'); // Ensure contrast against ivory menu
+                } else {
+                    mobileMenu.classList.remove('is-open');
+                    document.body.style.overflow = '';
+                    if (window.scrollY <= 50) {
+                        navbar.classList.remove('text-ink');
+                        navbar.classList.add('mix-blend-difference', 'text-ivory');
+                    }
+                }
+            }
+
+            mobileMenuBtn.addEventListener('click', toggleMenu);
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (isMenuOpen) toggleMenu();
+                });
+            });
+
+            // --- Customization Modal Logic ---
             const modal = document.getElementById('customizeModal');
             const form = document.getElementById('customizeForm');
             const formView = document.getElementById('customizeFormView');
             const successView = document.getElementById('customizeSuccessView');
             const closeBtn = document.getElementById('closeCustomizeModal');
             const resetBtn = document.getElementById('resetCustomizeForm');
-            const nameInput = document.getElementById('customerName');
-            const locationInput = document.getElementById('customerLocation');
-            const nameError = document.getElementById('nameError');
-            const locationError = document.getElementById('locationError');
+            const errorMsg = document.getElementById('formErrorMsg');
 
-            function openModal() {
+            function openModal(defaultOccasion = null) {
                 modal.classList.add('is-open');
                 modal.setAttribute('aria-hidden', 'false');
                 document.body.classList.add('nb-modal-locked');
-                // Reset to form view
                 formView.style.display = 'block';
                 successView.classList.remove('show');
-                setTimeout(() => nameInput.focus(), 350);
+                
+                if(defaultOccasion) {
+                    const occSelect = document.getElementById('cOccasion');
+                    for(let i=0; i<occSelect.options.length; i++) {
+                        if(occSelect.options[i].value === defaultOccasion) {
+                            occSelect.selectedIndex = i;
+                            break;
+                        }
+                    }
+                }
             }
 
             function closeModal() {
@@ -1380,34 +1384,24 @@
                 document.body.classList.remove('nb-modal-locked');
             }
 
-            function resetForm() {
-                form.reset();
-                nameInput.classList.remove('is-error');
-                locationInput.classList.remove('is-error');
-                nameError.classList.remove('show');
-                locationError.classList.remove('show');
-                formView.style.display = 'block';
-                successView.classList.remove('show');
-                setTimeout(() => nameInput.focus(), 200);
-            }
-
-            // Open modal on any trigger:
-            // - nav Customize link
-            // - nav "Customize" pill
-            // - "Customize Yours" links throughout
-            // - "Customize Your Flowers" button in bottom CTA
-            const openTriggers = [
-                document.getElementById('openCustomizeModalBottom'),
-                ...document.querySelectorAll('a.nav-customize-pill'),
-                ...document.querySelectorAll('a[href="#custom"]')
-            ].filter(Boolean);
-
-            openTriggers.forEach(trigger => {
-                trigger.addEventListener('click', (e) => {
+            // Bind all "Create Your Bouquet" buttons
+            document.querySelectorAll('.btn-customize').forEach(btn => {
+                btn.addEventListener('click', (e) => {
                     e.preventDefault();
                     openModal();
                 });
             });
+
+            // Global function to open modal from Occasions section
+            window.openModalWithOccasion = function(occ) {
+                openModal(occ);
+            };
+
+            // Global function for direct product ordering
+            window.orderProduct = function(name, price) {
+                const message = `Hi Namma Bouquets 🌷\n\nI'd like to order a product:\n\nProduct: ${name}\nPrice: ${price}\n\nPlease let me know how to proceed!`;
+                window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
+            };
 
             closeBtn.addEventListener('click', closeModal);
             modal.addEventListener('click', (e) => {
@@ -1416,68 +1410,43 @@
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
             });
-            resetBtn.addEventListener('click', resetForm);
 
-            // Form submission → build message + redirect to WhatsApp
+            resetBtn.addEventListener('click', () => {
+                form.reset();
+                formView.style.display = 'block';
+                successView.classList.remove('show');
+            });
+
             form.addEventListener('submit', (e) => {
                 e.preventDefault();
 
-                const name = nameInput.value.trim();
-                const location = locationInput.value.trim();
+                const name = document.getElementById('cName').value.trim();
+                const occasion = document.getElementById('cOccasion').value;
+                const colors = document.getElementById('cColors').value.trim();
+                const budget = document.getElementById('cBudget').value;
+                const date = document.getElementById('cDate').value.trim();
+                const loc = document.getElementById('cLocation').value.trim();
+                const msgDetail = document.getElementById('cMessage').value.trim();
 
-                let valid = true;
-
-                if (!name) {
-                    nameInput.classList.add('is-error');
-                    nameError.classList.add('show');
-                    valid = false;
-                } else {
-                    nameInput.classList.remove('is-error');
-                    nameError.classList.remove('show');
+                if (!name || !loc) {
+                    errorMsg.classList.remove('hidden');
+                    return;
                 }
+                errorMsg.classList.add('hidden');
 
-                if (!location) {
-                    locationInput.classList.add('is-error');
-                    locationError.classList.add('show');
-                    valid = false;
-                } else {
-                    locationInput.classList.remove('is-error');
-                    locationError.classList.remove('show');
-                }
+                let waMsg = `Hi Namma Bouquets 🌷\n\nI'd like to create a custom bouquet.\n\n`;
+                waMsg += `Name: ${name}\n`;
+                waMsg += `Location: ${loc}\n`;
+                waMsg += `Occasion: ${occasion}\n`;
+                if(colors) waMsg += `Preferred colors: ${colors}\n`;
+                waMsg += `Budget: ${budget}\n`;
+                if(date) waMsg += `Required by: ${date}\n`;
+                if(msgDetail) waMsg += `\nAdditional details:\n${msgDetail}\n`;
 
-                if (!valid) return;
+                window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waMsg)}`, '_blank');
 
-                // Build WhatsApp message
-                const message =
-                    `Hi Namma Bouquets 🌸\n\n` +
-                    `I'd love to customize a bouquet.\n\n` +
-                    `Name: ${name}\n` +
-                    `Location: ${location}\n\n` +
-                    `Please help me create something special!`;
-
-                const encodedMessage = encodeURIComponent(message);
-                const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
-
-                // Open WhatsApp in a new tab
-                window.open(whatsappURL, '_blank', 'noopener,noreferrer');
-
-                // Show success state
                 formView.style.display = 'none';
                 successView.classList.add('show');
-            });
-
-            // Clear error states on input
-            nameInput.addEventListener('input', () => {
-                if (nameInput.value.trim()) {
-                    nameInput.classList.remove('is-error');
-                    nameError.classList.remove('show');
-                }
-            });
-            locationInput.addEventListener('input', () => {
-                if (locationInput.value.trim()) {
-                    locationInput.classList.remove('is-error');
-                    locationError.classList.remove('show');
-                }
             });
         });
     </script>
